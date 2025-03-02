@@ -1,0 +1,50 @@
+nav {
+    color: #fff;
+    background-color: black;
+    padding: 1rem 2.5rem;
+    position: relative; /* Make nav a positioning context */
+}
+
+.glowTop {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Center the image horizontally */
+    width: auto; /* Let the image maintain its aspect ratio */
+    z-index: 1; /* Place it above other elements */
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative; /* Keep elements properly positioned */
+    z-index: 2; /* Ensure navigation is above the glow */
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+ul p {
+    margin-left: auto;
+    padding: 1rem 2.5rem
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.logo {
+    transform: scale(0.4);
+    margin-right: 20px;
+}
