@@ -1,17 +1,18 @@
 nav {
+    margin-top: 0;
     color: #fff;
     background-color: black;
     padding: 1rem 2.5rem;
-    position: relative; /* Make nav a positioning context */
+    position: relative;
 }
 
 .glowTop {
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX(-50%); /* Center the image horizontally */
-    width: auto; /* Let the image maintain its aspect ratio */
-    z-index: 1; /* Place it above other elements */
+    transform: translateX(-50%);
+    width: auto;
+    z-index: 1;
 }
 
 ul {
@@ -19,8 +20,8 @@ ul {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    position: relative; /* Keep elements properly positioned */
-    z-index: 2; /* Ensure navigation is above the glow */
+    position: relative;
+    z-index: 2;
 }
 
 .nav-left {
@@ -39,9 +40,34 @@ ul p {
     align-items: center;
 }
 
+
 a {
+    color: #9FA1A3;
+    cursor: pointer;
+    position: relative;
+}
+
+a::after {
+    content: " ";
+    bottom: -8px;
+    left: -4px;
+    right: -4px;
+    position: absolute;
+    border-top: 2px solid #A4FF4F;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform .6s
+        cubic-bezier(.19,1,.22,1);
+}
+
+a:hover {
     color: #fff;
-    text-decoration: underline;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+    box-sizing: border-box;
+
 }
 
 .logo {
