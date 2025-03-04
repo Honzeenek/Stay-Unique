@@ -5,10 +5,11 @@
 
 <main>
     <section class='hero'>
-            <h1 class='hero-text'>STAY UNIQUE</h1>
-            <h2 class='motto-line'>
-                Your <span class="motto-span">website</span>, made to impress. Custom. Fast. Flawless. Done for <span class="motto-span">you</span>
-            </h2>
+        <h1 class='hero-text'>STAY UNIQUE</h1>
+        <h2 class="background-text">PÁLENÍK</h2>
+        <h2 class='motto-line'>
+            Your <span class="motto-span">website</span>, made to impress. Custom. Fast. Flawless. Done for <span class="motto-span">you</span>
+        </h2>
         <button class='hero-button'>
             <img src={logo} alt='logo' id='button-logo' />
             <span class="divider"></span>
@@ -42,6 +43,20 @@
         );
     }
 
+    .background-text {
+        position: absolute;
+        z-index: -1;
+        transform: translateY(2rem);
+        user-select: none;
+        font-size: 20rem;
+        -webkit-text-stroke: 1px #ffffff;
+        color: transparent;
+        font-weight: bold;
+        opacity: 0.1;
+        letter-spacing: 1rem;
+
+
+    }
     .hero {
         position: relative;
         top: 5rem;
@@ -50,6 +65,7 @@
         align-items: center;
     }
     .hero-text {
+        user-select: none;
         font-weight: bold;
         font-size: 8rem;
         line-height: 1.3;
@@ -64,6 +80,7 @@
         -webkit-text-fill-color: transparent;
     }
     .motto-line {
+        user-select: none;
         position: relative;
         top: -2rem;
         font-size: 2rem;
@@ -97,6 +114,9 @@
         transform: translateY(-5px);
         filter: drop-shadow(0 8px 20px rgba(70, 153, 255, 0.6));
     }
+    .hero-button:hover #button-logo {
+        filter: hue-rotate(45deg) brightness(1.2);
+    }
     .hero-button span {
         color: black;
     }
@@ -110,5 +130,4 @@
         width: 2rem;
         height: 2rem;
     }
-
 </style>
