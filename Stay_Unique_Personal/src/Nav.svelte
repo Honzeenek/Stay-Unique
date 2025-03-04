@@ -79,7 +79,7 @@
         color: #ffffff;
         cursor: pointer;
         position: relative;
-        transition: color 0.6s var(--elastic-ease-out);
+        transition: color 1.3s var(--elastic-ease-out);
     }
 
     .nav-left:has(a:hover) a {
