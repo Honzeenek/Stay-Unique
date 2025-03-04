@@ -1,11 +1,10 @@
 <script>
     import './reset.css'
     import logo from './assets/logo.png'
-    import glow from './assets/glow.png'
 </script>
 
 <nav>
-    <img src={glow} alt="Top Glow" class="glowTop">
+
     <ul>
         <div class="nav-left">
             <img alt="logo" src={logo} class="logo">
@@ -48,15 +47,7 @@
         background-color: black;
         padding: 1rem 2.5rem;
         position: relative;
-    }
-
-    .glowTop {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: auto;
-        z-index: 1;
+        top: 1rem;
     }
 
     ul {
