@@ -42,7 +42,14 @@
                 1
         );
     }
-
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
     .background-text {
         position: absolute;
         z-index: -1;
@@ -63,6 +70,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        opacity: 0; /* Start with the element hidden */
+        animation: fadeIn 1s ease-in-out forwards; /* 2s duration, ease-in-out timing function */
     }
     .hero-text {
         user-select: none;
@@ -109,6 +118,8 @@
         transition: transform 0.3s ease, filter 0.3s ease;
         filter: drop-shadow(0 4px 15px rgba(70, 153, 255, 0.47));
         cursor: pointer;
+        opacity: 0; /* Start with the element hidden */
+        animation: fadeIn 1.5s ease-in-out forwards; /* 2s duration, ease-in-out timing function */
     }
     .hero-button:hover {
         transform: translateY(-5px);
