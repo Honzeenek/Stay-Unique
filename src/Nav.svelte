@@ -25,7 +25,7 @@
         background-color: black;
         padding: 1rem 0;
         position: relative;
-        top: 1rem;
+        top: 3rem;
     }
 
     ul {

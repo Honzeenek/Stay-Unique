@@ -6,7 +6,6 @@ const app = mount(App, {
   target: document.getElementById('app'),
 })
 
-// Initialize Lenis
 const lenis = new Lenis({
   autoRaf: true,
 });

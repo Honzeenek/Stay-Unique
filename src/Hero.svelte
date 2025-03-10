@@ -50,9 +50,9 @@
         }
     }
     .hero {
-        height: 90vh;
+        height: 95vh;
         position: relative;
-        top: 5rem;
+        top: 10rem;
         display: flex;
         flex-direction: column;
         align-items: center;

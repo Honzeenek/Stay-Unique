@@ -1,14 +1,14 @@
-<script>
+<script lang="ts">
     import './reset.css'
     import logo from './assets/logo.svg'
     import Twitter from './assets/twitter.svg'
     import LinkedIn from './assets/linkedin.svg'
     import GitHub from './assets/github.svg'
 
-    let isAnyIconHovered = false;
+    let isAnyIconHovered: boolean = false;
 
-    const handleIconHover = (event, entering) => {
-        const ul = document.querySelector('.footerLeft ul'); // Use querySelector instead of querySelectorAll
+    const handleIconHover = (event: MouseEvent, entering: boolean) => {
+        const ul: HTMLUListElement = document.querySelector('.footerLeft ul');
         if (entering) {
             ul.classList.add('icons-hovered');
         } else {
@@ -19,6 +19,9 @@
 </script>
 
 <main>
+    <section class="footerName">
+        <h2 id="footerPalenik">PÁLENÍK</h2>
+    </section>
     <div class="line"></div>
     <footer>
         <section class="footerLeft">
@@ -33,7 +36,7 @@
                 <li class="socialIcons"
                     on:mouseenter={(e) => handleIconHover(e, true)}
                     on:mouseleave={(e) => handleIconHover(e, false)}>
-                    <a href="..."><img src={Twitter} alt="Twitter" /></a>
+                    <a href="https://x.com/honzeenek" target="_blank"><img src={Twitter} alt="Twitter" /></a>
                 </li>
                 <li class="socialIcons"
                     on:mouseenter={(e) => handleIconHover(e, true)}
@@ -43,7 +46,7 @@
                 <li class="socialIcons"
                     on:mouseenter={(e) => handleIconHover(e, true)}
                     on:mouseleave={(e) => handleIconHover(e, false)}>
-                    <a href="..."><img src={GitHub} alt="GitHub" /></a>
+                    <a href="https://github.com/Honzeenek" target="_blank"><img src={GitHub} alt="GitHub" /></a>
                 </li>
             </ul>
         </section>
@@ -63,6 +66,18 @@
 </main>
 
 <style>
+    .footerName {
+        display: flex;
+        justify-content: center;
+
+        #footerPalenik {
+            font-size: 13rem;
+            letter-spacing: 1.3rem;
+            color: transparent;
+            -webkit-text-stroke: 1px white;
+        }
+    }
+
     .line {
         border: 1px solid transparent;
         background: linear-gradient(
@@ -80,7 +95,6 @@
         justify-content: space-between;
         height: 20vh;
         padding-top: 2rem;
-
         h2 {
             font-size: 1.5rem;
             font-weight: bold;
