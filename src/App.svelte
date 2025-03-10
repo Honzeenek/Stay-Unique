@@ -20,12 +20,12 @@
 
     .glow-effect {
       position: absolute;
-      opacity: 70%;
+      opacity: 50%;
       top: 0;
       left: 50%;
       transform: translateX(-50%);
-      width: 70vw;
-      height: 100px;
+      width: 60vw;
+      height: 70px;
       background: radial-gradient(
               ellipse at center top,
               rgba(255, 255, 255, 0.7) 0%,
