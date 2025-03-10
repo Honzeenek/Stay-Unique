@@ -1,9 +1,9 @@
 <script lang="ts">
     import './reset.css'
     import logo from './assets/logo.svg'
-    import Twitter from './assets/twitter.svg'
+    import Twitter from './assets/Twitter.svg'
     import LinkedIn from './assets/linkedin.svg'
-    import GitHub from './assets/github.svg'
+    import GitHub from './assets/GitHub.svg'
 
     let isAnyIconHovered: boolean = false;
 
@@ -69,9 +69,10 @@
     .footerName {
         display: flex;
         justify-content: center;
+        user-select: none;
 
         #footerPalenik {
-            font-size: 13rem;
+            font-size: 24.5rem;
             letter-spacing: 1.3rem;
             color: transparent;
             -webkit-text-stroke: 1px white;
