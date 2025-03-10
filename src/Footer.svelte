@@ -20,7 +20,7 @@
 
 <main>
     <section class="footerName">
-        <h2 id="footerPalenik">PÁLENÍK</h2>
+        <h2 id="footerPalenik">NEGR</h2>
     </section>
     <div class="line"></div>
     <footer>
@@ -187,7 +187,7 @@
             }
 
             button {
-                box-shadow: inset -1px 4px 30px 0px rgba(155, 155, 155, 0.25);
+                box-shadow: inset -1px 4px 30px 0 rgba(155, 155, 155, 0.25);
                 background-color: #000000;
                 border: none;
                 color: white;

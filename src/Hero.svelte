@@ -5,7 +5,8 @@
 
 <main>
     <section class='hero'>
-        <h1 class='hero-text'>STAY UNIQUE</h1>
+        <h2 class="hero-name">&lt; Jan Páleník &gt</h2>
+        <h1 class='hero-text'>WEB ENGINEER</h1>
         <h2 class='motto-line'>
             Your <span class="motto-span">website</span>, made to impress. Custom. Fast. Flawless. Done for <span class="motto-span">you</span>
         </h2>
@@ -58,6 +59,13 @@
         align-items: center;
         opacity: 0; /* Start with the element hidden */
         animation: fadeIn 1s ease-in-out forwards; /* 2s duration, ease-in-out timing function */
+
+        .hero-name {
+            user-select: none;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffffff;
+        }
         .hero-text {
             user-select: none;
             font-weight: bold;

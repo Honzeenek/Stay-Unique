@@ -27,10 +27,16 @@
       width: 70vw;
       height: 100px;
       background: radial-gradient(
-        ellipse at center top,
-        rgba(255, 255, 255, 0.7) 0%,
-        rgba(255, 255, 255, 0.4) 20%,
-        rgba(255, 255, 255, 0) 60%
+              ellipse at center top,
+              rgba(255, 255, 255, 0.7) 0%,
+              rgba(255, 255, 255, 0.4) 20%,
+              rgba(255, 255, 255, 0) 60%
+      ),
+      radial-gradient(
+              ellipse at center top,
+              rgb(70, 153, 255) 0%,
+              rgba(70, 153, 255, 0.75) 20%,
+              rgba(70, 153, 255, 0) 60%
       );
       pointer-events: none;
       z-index: 1;
