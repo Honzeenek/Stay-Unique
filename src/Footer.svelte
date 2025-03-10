@@ -1,6 +1,21 @@
 <script>
     import './reset.css'
     import logo from './assets/logo.svg'
+    import Twitter from './assets/twitter.svg'
+    import LinkedIn from './assets/linkedin.svg'
+    import GitHub from './assets/github.svg'
+
+    let isAnyIconHovered = false;
+
+    const handleIconHover = (event, entering) => {
+        const ul = document.querySelector('.footerLeft ul'); // Use querySelector instead of querySelectorAll
+        if (entering) {
+            ul.classList.add('icons-hovered');
+        } else {
+            ul.classList.remove('icons-hovered');
+        }
+    }
+
 </script>
 
 <main>
@@ -15,16 +30,35 @@
                 making it interactive is my passion.
             </p>
             <ul>
-                <li><a href="...">Twitter</a></li>
-                <li><a href="...">LinkedIN</a></li>
-                <li><a href="...">GitHub</a></li>
+                <li class="socialIcons"
+                    on:mouseenter={(e) => handleIconHover(e, true)}
+                    on:mouseleave={(e) => handleIconHover(e, false)}>
+                    <a href="..."><img src={Twitter} alt="Twitter" /></a>
+                </li>
+                <li class="socialIcons"
+                    on:mouseenter={(e) => handleIconHover(e, true)}
+                    on:mouseleave={(e) => handleIconHover(e, false)}>
+                    <a href="..."><img src={LinkedIn} alt="LinkedIn" /></a>
+                </li>
+                <li class="socialIcons"
+                    on:mouseenter={(e) => handleIconHover(e, true)}
+                    on:mouseleave={(e) => handleIconHover(e, false)}>
+                    <a href="..."><img src={GitHub} alt="GitHub" /></a>
+                </li>
             </ul>
         </section>
         <section class="footerRight">
             <h2 id="rightHeading">Let’s craft <span>your</span> standout <span>website</span></h2>
-            <button>Get in touch</button>
+            <div class="button-section">
+                <button>Get in touch</button>
+                <button>jan.palenik@icloud.com</button>
+            </div>
         </section>
     </footer>
+    <section class="copyright">
+        <div class="copyrightLine"></div>
+        <p> Copyright &copy; Jan Páleník. All rights reserved.</p>
+    </section>
 
 </main>
 
@@ -44,7 +78,7 @@
     footer {
         display: flex;
         justify-content: space-between;
-        height: 30vh;
+        height: 20vh;
         padding-top: 2rem;
 
         h2 {
@@ -74,7 +108,7 @@
             }
 
             #motto {
-                font-size: 12px;
+                font-size: 14px;
                 padding: 0.9rem 0 1.8rem 0;
                 font-weight: 400;
                 line-height: 1.5;
@@ -82,60 +116,101 @@
 
             ul {
                 display: flex;
-                gap: 1rem;
+                gap: 2.5rem;
+
+                /* Apply the gray filter to all icons when any icon is hovered */
+                &:has(.socialIcons:hover) .socialIcons a img {
+                    filter: opacity(0.5);
+                }
+
+                .socialIcons {
+                    transition: 1.3s var(--elastic-ease-out);
+                    position: relative;
+
+                    a img {
+                        transition: filter 0.3s ease;
+                    }
+
+                    &:hover {
+                        transform: translateY(-3px);
+                        cursor: pointer;
+                        transition: 1.3s var(--elastic-ease-out);
+
+                        /* Keep the hovered icon white */
+                        a img {
+                            filter: opacity(1) !important;
+                        }
+                    }
+
+                    &::after {
+                        content: " ";
+                        bottom: -8px;
+                        left: -4px;
+                        right: -4px;
+                        position: absolute;
+                        border-top: 2px solid #A4FF4F;
+                        transform: scaleX(0);
+                        transform-origin: left center;
+                        transition: transform .6s cubic-bezier(.19,1,.22,1);
+                    }
+
+                    &:hover::after {
+                        transform: scaleX(1);
+                        box-sizing: border-box;
+                    }
+                }
             }
         }
 
         .footerRight {
-            #rightHeading {
-                padding: 1rem 0;
-            }
             display: flex;
             flex-direction: column;
             align-items: start;
+
+            #rightHeading {
+                padding: 0 0 0.9rem 0;
+            }
 
             button {
                 box-shadow: inset -1px 4px 30px 0px rgba(155, 155, 155, 0.25);
                 background-color: #000000;
                 border: none;
                 color: white;
-                padding: 0.5rem 3rem;
-                border-radius: 0.7rem;
-                font-size: 16px;
+                padding: 1rem 2rem ;
+                border-radius: 1rem;
+                font-size: 14px;
                 font-weight: bold;
                 transition: transform 0.3s ease;
                 cursor: pointer;
                 position: relative;
             }
-
-            button::after {
-                content: '';
-                position: absolute;
-                top: -2px;
-                left: -2px;
-                width: calc(100% + 4px);
-                height: calc(100% + 4px);
-                background: linear-gradient(90deg, #A4FF4F, transparent, #A4FF4F);
-                border-radius: 0.9rem;
-                z-index: -1;
-                background-size: 300% 100%;
-                animation: glowingBorder 4s linear infinite;
-            }
-
             button:hover {
                 transform: translateY(-3px);
+
             }
         }
     }
+    .copyright {
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 14px;
 
-    @keyframes glowingBorder {
-        0% {
-            background-position: 0% 0%;
+        .copyrightLine {
+            border: 1px solid transparent;
+            background: linear-gradient(
+                to right,
+                #000000 0%,
+                #2A2A2A 50%,
+                #000000 100%
+            );
+            height: 1px;
+            width: 50%;
         }
-        100% {
-            background-position: 300% 0%;
+        p {
+            color: #828282;
+            padding: 1rem;
         }
     }
-
-
 </style>

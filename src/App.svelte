@@ -1,10 +1,9 @@
 <script>
-    import svelteLogo from './assets/svelte.svg';
     import './reset.css'
     import Nav from './Nav.svelte'
     import Hero from './Hero.svelte'
     import Footer from "./Footer.svelte";
-  </script>
+</script>
 
   <main>
     <div class="glow-effect"></div>
