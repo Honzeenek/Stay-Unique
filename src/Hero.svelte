@@ -89,6 +89,7 @@
             font-weight: bold;
         }
         .hero-button {
+            user-select: none;
             position: relative;
             top: 0;
             display: flex;

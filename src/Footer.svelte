@@ -52,10 +52,10 @@
         </section>
         <section class="footerRight">
             <h2 id="rightHeading">Let’s craft <span>your</span> standout <span>website</span></h2>
-            <div class="button-section">
+            <section class="button-section">
                 <button>Get in touch</button>
                 <button>jan.palenik@icloud.com</button>
-            </div>
+            </section>
         </section>
     </footer>
     <section class="copyright">
