@@ -1,51 +1,29 @@
 <script>
     import './reset.css'
-    import logo from './assets/logo.png'
+    import logo from './assets/logo.svg'
 </script>
 
 <nav>
 
     <ul>
         <div class="nav-left">
-            <img alt="logo" src={logo} class="logo">
-            <li class="navItem"><a>About</a></li>
-            <li class="navItem"><a>Work</a></li>
-            <li class="navItem"><a>Contact</a></li>
+            <li><img alt="logo" src={logo} class="logo"></li>
+            <li class="navItem"><a href="...">About</a></li>
+            <li class="navItem"><a href="...">Work</a></li>
+            <li class="navItem"><a href="...">Contact</a></li>
         </div>
         <p>Jan Páleník</p>
     </ul>
 </nav>
 
 <style>
-    :root {
-        --elastic-ease-out: linear(
-                0,
-                0.5737 7.6%,
-                0.8382 11.87%,
-                0.9463 14.19%,
-                1.0292 16.54%,
-                1.0886 18.97%,
-                1.1258 21.53%,
-                1.137 22.97%,
-                1.1424 24.48%,
-                1.1423 26.1%,
-                1.1366 27.86%,
-                1.1165 31.01%,
-                1.0507 38.62%,
-                1.0219 42.57%,
-                0.9995 46.99%,
-                0.9872 51.63%,
-                0.9842 58.77%,
-                1.0011 81.26%,
-                1
-        );
-    }
+
 
     nav {
         margin-top: 0;
         color: #fff;
         background-color: black;
-        padding: 1rem 2.5rem;
+        padding: 1rem 0;
         position: relative;
         top: 1rem;
     }
@@ -67,7 +45,6 @@
 
     ul p {
         margin-left: auto;
-        padding: 1rem 2.5rem
     }
 
     .navItem {
@@ -108,7 +85,9 @@
     }
 
     .logo {
-        transform: scale(0.4);
-        margin-right: 20px;
+        width: 25px;
+        height: 25px;
+        object-fit: contain;
+        padding-right: 1rem;
     }
 </style>
