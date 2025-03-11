@@ -120,13 +120,13 @@
                     color: #ffffff;
                     width: 100%;
                     outline: none;
+                    padding: 1rem 0;
                 }
                 textarea {
                     resize: none;
                 }
 
-                &:has(input:focus),
-                &:has(textarea:focus) {
+                &:has(input:focus) {
                     border-bottom-color: #A4FF4F;
                 }
             }
