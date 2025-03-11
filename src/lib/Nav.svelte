@@ -10,7 +10,7 @@
             <li><img alt="logo" src={logo} class="logo"></li>
             <li class="navItem"><a href="...">About</a></li>
             <li class="navItem"><a href="...">Work</a></li>
-            <li class="navItem"><a href="...">Contact</a></li>
+            <li class="navItem"><a href="/contact">Contact</a></li>
         </div>
         <p>Jan Páleník</p>
     </ul>
