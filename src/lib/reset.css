@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'helvetica-now';
-  src: url('./fonts/HelveticaNowText-Bold.ttf');
+  src: url('../fonts/HelveticaNowText-Bold.ttf');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'helvetica-now';
-  src: url('./fonts/HelveticaNowText-Regular.ttf');
+  src: url('../fonts/HelveticaNowText-Regular.ttf');
   font-weight: normal;
   font-style: normal;
 }

@@ -1,9 +1,9 @@
 <script lang="ts">
     import './reset.css'
-    import logo from './assets/logo.svg'
-    import Twitter from './assets/Twitter.svg'
-    import LinkedIn from './assets/linkedIn.svg'
-    import GitHub from './assets/GitHub.svg'
+    import logo from '../assets/logo.svg'
+    import Twitter from '../assets/Twitter.svg'
+    import LinkedIn from '../assets/linkedIn.svg'
+    import GitHub from '../assets/GitHub.svg'
 
     let isAnyIconHovered: boolean = false;
 

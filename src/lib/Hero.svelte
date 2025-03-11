@@ -1,7 +1,7 @@
 <script>
     import './reset.css'
-    import logo from './assets/Layer 1.svg'
-    import circleLogo from './assets/logo circle.svg'
+    import logo from '../assets/Layer 1.svg'
+    import circleLogo from '../assets/logo circle.svg'
 </script>
 
 <main>

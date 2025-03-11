@@ -1,10 +1,10 @@
 <script>
     import './reset.css'
-    import logo from './assets/logo.svg'
+    import logo from '../assets/logo.svg'
+    import Contact from './Contact.svelte'
 </script>
 
 <nav>
-
     <ul>
         <div class="nav-left">
             <li><img alt="logo" src={logo} class="logo"></li>
