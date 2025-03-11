@@ -114,9 +114,6 @@
             cursor: pointer;
             opacity: 0;
             animation: fadeIn 1.5s ease-in-out forwards;
-
-            #button-logo {
-            }
         }
         .hero-button:hover {
             transform: translateY(-5px);
