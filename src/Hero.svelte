@@ -1,19 +1,19 @@
 <script>
     import './reset.css'
     import logo from './assets/Layer 1.svg'
+    import circleLogo from './assets/logo circle.svg'
 </script>
 
 <main>
     <section class='hero'>
-        <h2 class="hero-name">&lt; Jan Páleník &gt</h2>
+        <h2 class="hero-name">Stay Unique</h2>
         <h1 class='hero-text'>WEB ENGINEER</h1>
         <h2 class='motto-line'>
             Your <span class="motto-span">website</span>, made to impress. Custom. Fast. Flawless. Done for <span class="motto-span">you</span>
         </h2>
         <button class='hero-button'>
-            <img src={logo} alt='logo' id='button-logo' />
-            <span class="divider"></span>
-            <span>Get Yours</span>
+            <img id='button-logo' src={circleLogo} alt="logo">
+            <span>Get Your Website</span>
         </button>
     </section>
 </main>
@@ -62,8 +62,8 @@
 
         .hero-name {
             user-select: none;
-            font-size: 2rem;
-            font-weight: bold;
+            font-size: 1.5rem;
+            font-weight: normal;
             color: #ffffff;
         }
         .hero-text {
@@ -85,7 +85,7 @@
             user-select: none;
             position: relative;
             top: -2rem;
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: normal;
             text-align: center;
             margin-top: 1rem;
@@ -94,7 +94,7 @@
         }
         .motto-span {
             color: #A4FF4F;
-            font-weight: bold;
+            font-weight: normal;
         }
         .hero-button {
             user-select: none;
@@ -102,18 +102,21 @@
             top: 0;
             display: flex;
             align-items: center;
-            gap: 1.5rem;
-            font-size: 2rem;
+            gap: 1rem;
+            font-size: 1.3rem;
             font-weight: bold;
             background-color: #A4FF4F;
             border: none;
-            border-radius: 1rem;
-            padding: 0.5rem 1.5rem;
+            border-radius: 3rem;
+            padding: 0.5rem 0.7rem;
             transition: transform 0.3s ease, filter 0.3s ease;
             filter: drop-shadow(0 4px 15px rgba(70, 153, 255, 0.47));
             cursor: pointer;
             opacity: 0;
             animation: fadeIn 1.5s ease-in-out forwards;
+
+            #button-logo {
+            }
         }
         .hero-button:hover {
             transform: translateY(-5px);
@@ -124,12 +127,6 @@
         }
         .hero-button span {
             color: black;
-        }
-        .divider {
-            background-color: black;
-            height: 2rem;
-            border-radius: 1rem;
-            width: 5px;
         }
         #button-logo {
             width: 2rem;

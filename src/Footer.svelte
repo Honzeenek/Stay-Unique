@@ -20,7 +20,7 @@
 
 <main>
     <section class="footerName">
-        <h2 id="footerPalenik">NEGR</h2>
+        <h2 id="footerPalenik">PÁLENÍK</h2>
     </section>
     <div class="line"></div>
     <footer>
@@ -50,18 +50,19 @@
                 </li>
             </ul>
         </section>
-        <section class="footerRight">
-            <h2 id="rightHeading">Let’s craft <span>your</span> standout <span>website</span></h2>
-            <section class="button-section">
-                <button>Get in touch</button>
-                <button>jan.palenik@icloud.com</button>
-            </section>
-        </section>
     </footer>
+    <section class="footerRight">
+        <h2 id="rightHeading">Let’s craft <span>your</span> standout <span>website</span></h2>
+        <section class="button-section">
+            <button>Get in touch</button>
+            <button>jan.palenik@icloud.com</button>
+        </section>
+    </section>
     <section class="copyright">
         <div class="copyrightLine"></div>
         <p> Copyright &copy; Jan Páleník. All rights reserved.</p>
     </section>
+
 
 </main>
 
@@ -97,14 +98,9 @@
         height: 20vh;
         padding-top: 2rem;
         h2 {
-            font-size: 1.5rem;
+            font-size: 1rem;
             font-weight: bold;
         }
-
-        span {
-            color: #A4FF4F;
-        }
-
         .footerLeft {
             display: flex;
             flex-direction: column;
@@ -123,7 +119,7 @@
             }
 
             #motto {
-                font-size: 14px;
+                font-size: 1rem;
                 padding: 0.9rem 0 1.8rem 0;
                 font-weight: 400;
                 line-height: 1.5;
@@ -176,41 +172,45 @@
                 }
             }
         }
+    }
+    .footerRight {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-        .footerRight {
-            display: flex;
-            flex-direction: column;
-            align-items: start;
+        span {
+            color: #A4FF4F;
+        }
 
-            #rightHeading {
-                padding: 0 0 0.9rem 0;
-            }
+        #rightHeading {
+            padding: 0 0 0.9rem 0;
+        }
 
-            button {
-                box-shadow: inset -1px 4px 30px 0 rgba(155, 155, 155, 0.25);
-                background-color: #000000;
-                border: none;
-                color: white;
-                padding: 1rem 2rem ;
-                border-radius: 1rem;
-                font-size: 14px;
-                font-weight: bold;
-                transition: transform 0.3s ease;
-                cursor: pointer;
-                position: relative;
-            }
-            button:hover {
-                transform: translateY(-3px);
+        button {
+            box-shadow: inset -1px 4px 30px 0 rgba(155, 155, 155, 0.25);
+            background-color: #000000;
+            border: none;
+            color: white;
+            padding: 1rem 2rem ;
+            border-radius: 1rem;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        button:hover {
+            transform: translateY(-3px);
 
-            }
         }
     }
+
     .copyright {
         padding: 1rem 0;
         display: flex;
         flex-direction: column;
         align-items: center;
-        font-size: 14px;
+        font-size: 1rem;
 
         .copyrightLine {
             border: 1px solid transparent;
