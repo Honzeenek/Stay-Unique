@@ -110,7 +110,7 @@
             border-radius: 3rem;
             padding: 0.5rem 0.7rem;
             transition: transform 0.3s ease, filter 0.3s ease;
-            filter: drop-shadow(0 4px 15px rgba(70, 153, 255, 0.47));
+            filter: drop-shadow(0 2px 7px rgb(164, 255, 79));
             cursor: pointer;
             opacity: 0;
             animation: fadeIn 1.5s ease-in-out forwards;
@@ -120,7 +120,7 @@
         }
         .hero-button:hover {
             transform: translateY(-5px);
-            filter: drop-shadow(0 8px 20px rgba(70, 153, 255, 0.6));
+            filter: drop-shadow(0 8px 20px rgb(164, 255, 79));
         }
         .hero-button:hover #button-logo {
             filter: hue-rotate(45deg) brightness(1.2);
