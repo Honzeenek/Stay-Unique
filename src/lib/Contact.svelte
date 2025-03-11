@@ -106,7 +106,7 @@
                 font-size: 1.5rem;
                 display: flex;
                 padding: 2rem 0 ;
-                gap: 1.5rem;
+                gap: 1rem;
                 flex-direction: column;
                 border: none;
                 border-bottom: 1px solid #2A2A2A;
