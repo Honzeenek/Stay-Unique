@@ -53,7 +53,7 @@
         <section class="footerRight">
             <h2 id="rightHeading">Let’s craft <span>your</span> standout <span>website</span></h2>
             <section class="button-section">
-                <button>Get in touch</button>
+                <button><a href="/contact">Get in touch</a></button>
                 <button>jan.palenik@icloud.com</button>
             </section>
         </section>
