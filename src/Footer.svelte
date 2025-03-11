@@ -50,14 +50,15 @@
                 </li>
             </ul>
         </section>
-    </footer>
-    <section class="footerRight">
-        <h2 id="rightHeading">Let’s craft <span>your</span> standout <span>website</span></h2>
-        <section class="button-section">
-            <button>Get in touch</button>
-            <button>jan.palenik@icloud.com</button>
+        <section class="footerRight">
+            <h2 id="rightHeading">Let’s craft <span>your</span> standout <span>website</span></h2>
+            <section class="button-section">
+                <button>Get in touch</button>
+                <button>jan.palenik@icloud.com</button>
+            </section>
         </section>
-    </section>
+    </footer>
+
     <section class="copyright">
         <div class="copyrightLine"></div>
         <p> Copyright &copy; Jan Páleník. All rights reserved.</p>
@@ -176,7 +177,7 @@
     .footerRight {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: start;
 
         span {
             color: #A4FF4F;
