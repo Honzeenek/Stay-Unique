@@ -1,5 +1,6 @@
 <script lang="ts">
     import Nav from './Nav.svelte';
+    import Footer from './Footer.svelte';
 
     const handleSubmit = (event: Event) => {
         event.preventDefault();
@@ -18,22 +19,22 @@
                 What's your name?
                 <input type="text" placeholder="John Doe" />
             </label>
-            <div class="line"></div>
+<!--            <div class="line"></div>-->
             <label>
                 What's your email?
                 <input type="email" placeholder="john.doe@email.com" />
             </label>
-            <div class="line"></div>
+<!--            <div class="line"></div>-->
             <label>
                 What's the name of your organization?
                 <input type="text" placeholder="Pfizer" />
             </label>
-            <div class="line"></div>
+<!--            <div class="line"></div>-->
             <label>
                 What service are you looking for?
                 <input type="text" placeholder="Web Development / Web Design"/>
             </label>
-            <div class="line"></div>
+<!--            <div class="line"></div>-->
             <label>
                 Your message
                 <textarea placeholder="Hello Jan, I need help with..."></textarea>
@@ -41,7 +42,9 @@
             <button>SUBMIT</button>
         </form>
     </section>
+    <Footer />
 </main>
+
 
 <style>
     main {
@@ -62,12 +65,6 @@
                 rgba(255, 255, 255, 0.4) 20%,
                 rgba(255, 255, 255, 0) 60%
         );
-        /*radial-gradient(*/
-        /*        ellipse at center top,*/
-        /*        rgb(70, 153, 255) 0%,*/
-        /*        rgba(70, 153, 255, 0.75) 20%,*/
-        /*        rgba(70, 153, 255, 0) 60%*/
-        /*);*/
         pointer-events: none;
         z-index: 1;
     }
@@ -78,7 +75,8 @@
         flex-direction: column;
         padding: 5rem 0 ;
         color: #ffffff;
-
+        max-width: 600px;
+        width: 100%;
         h1 {
             line-height: 120%;
             font-size: 3rem;
@@ -93,26 +91,11 @@
         h2 {
             font-size: 1.5rem;
             padding: 2rem 0;
-        }
-
-        #greenLine {
-            border-radius: 1rem;
-            border: 1px solid transparent;
-            background: #A4FF4F;
-            height: 1px;
+            border-bottom: #A4FF4F 1px solid;
             width: 100%;
             transition: background 0.5s ease-in;
         }
 
-        form:has(input:focus) #greenLine,
-        form:has(textarea:focus) #greenLine {
-            background: linear-gradient(
-                    to right,
-                    #2a2a2a 0%,
-                    #2A2A2A 70%,
-                    #1e1e1e 100%
-            );
-        }
         form {
             display: flex;
             flex-direction: column;
@@ -127,6 +110,8 @@
                 gap: 1rem;
                 border: none;
                 padding: 1rem 0;
+                border-bottom: 1px solid #2A2A2A;
+                transition: border-color 0.5s ease;
 
                 input, textarea {
                     font-family: inherit;
@@ -140,6 +125,11 @@
                 }
                 textarea {
                     resize: none;
+                }
+
+                &:has(input:focus),
+                &:has(textarea:focus) {
+                    border-bottom-color: #A4FF4F;
                 }
             }
             button {
@@ -155,28 +145,7 @@
             }
             button:hover {
                 transform: translateY(-5px);
-                filter: drop-shadow(0 8px 5px rgb(109, 217, 0));
             }
         }
-
-        label:has(input:focus) + .line {
-            background: #A4FF4F;
-            transition: background 0.5s ease-in;
-        }
-
-        .line {
-            border-radius: 1rem;
-            border: 1px solid transparent;
-            background: linear-gradient(
-                    to right,
-                    #2a2a2a 0%,
-                    #2A2A2A 70%,
-                    #1e1e1e 100%
-            );
-            height: 1px;
-            width: 100%;
-        }
     }
-
-
 </style>
