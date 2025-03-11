@@ -106,6 +106,7 @@
                 font-size: 1.5rem;
                 display: flex;
                 padding: 2rem 0 ;
+                gap: 1.5rem;
                 flex-direction: column;
                 border: none;
                 border-bottom: 1px solid #2A2A2A;
@@ -117,7 +118,6 @@
                     background: transparent;
                     border: none;
                     color: #ffffff;
-                    padding: 0.5rem 0;
                     width: 100%;
                     outline: none;
                 }
