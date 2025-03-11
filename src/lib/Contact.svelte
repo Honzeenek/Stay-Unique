@@ -105,7 +105,7 @@
             label {
                 font-size: 1.5rem;
                 display: flex;
-                padding: 2rem 0 ;
+                padding: 2.5rem 0 ;
                 gap: 1rem;
                 flex-direction: column;
                 border: none;
