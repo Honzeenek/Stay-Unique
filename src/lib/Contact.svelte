@@ -12,7 +12,7 @@
     <Nav />
     <section class="contact-content">
         <h1>Ready to enhance <br> your <span>WEB</span> game?</h1>
-        <h2>Let's break the ice and begin</h2>
+        <h2>Let's break the ice</h2>
         <form on:submit={handleSubmit}>
             <div id="greenLine"></div>
             <label>
