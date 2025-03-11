@@ -99,17 +99,15 @@
         form {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
             max-width: 600px;
             font-size: 1.5rem;
 
             label {
                 font-size: 1.5rem;
                 display: flex;
+                padding: 2rem 0 ;
                 flex-direction: column;
-                gap: 1rem;
                 border: none;
-                padding: 1rem 0;
                 border-bottom: 1px solid #2A2A2A;
                 transition: border-color 0.5s ease;
 
