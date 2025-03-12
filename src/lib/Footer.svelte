@@ -8,14 +8,15 @@
     let isAnyIconHovered: boolean = false;
 
     const handleIconHover = (event: MouseEvent, entering: boolean) => {
-        const ul: HTMLUListElement = document.querySelector('.footerLeft ul');
-        if (entering) {
-            ul.classList.add('icons-hovered');
-        } else {
-            ul.classList.remove('icons-hovered');
+        const ul = document.querySelector('.footerLeft ul') as HTMLUListElement | null;
+        if(ul) {
+            if (entering) {
+                ul.classList.add('icons-hovered');
+            } else {
+                ul.classList.remove('icons-hovered');
+            }
         }
     }
-
 </script>
 
 <main>
@@ -54,7 +55,7 @@
             <h2 id="rightHeading">Let’s craft <span>your</span> standout <span>website</span></h2>
             <section class="button-section">
                 <button><a href="/contact">Get in touch</a></button>
-                <button>jan.palenik@icloud.com</button>
+                <button><a href="mailto:jan.paleni@icloud.com">jan.palenik@icloud.com</a></button>
             </section>
         </section>
     </footer>
