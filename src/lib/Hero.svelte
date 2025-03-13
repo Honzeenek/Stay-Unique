@@ -2,6 +2,7 @@
     import './reset.css'
     import logo from '../assets/Layer 1.svg'
     import circleLogo from '../assets/logo circle.svg'
+    import HeroButton from './HeroButton.svelte'
 </script>
 
 <main>
@@ -11,10 +12,11 @@
         <h2 class='motto-line'>
             Your <span class="motto-span">website</span>, made to impress. Custom. Fast. Flawless. Done for <span class="motto-span">you</span>
         </h2>
-        <button class='hero-button'>
-            <img id='button-logo' src={circleLogo} alt="logo">
-            <span>Get Your Website</span>
-        </button>
+<!--        <button class='hero-button'>-->
+<!--            <img id='button-logo' src={circleLogo} alt="logo">-->
+<!--            Get Your Website-->
+<!--        </button>-->
+        <HeroButton />
     </section>
 </main>
 
@@ -96,6 +98,9 @@
             color: #A4FF4F;
             font-weight: normal;
         }
+
+        /* Unused button styles - commenting out as the button is now a component */
+        /*
         .hero-button {
             user-select: none;
             position: relative;
@@ -129,6 +134,6 @@
             width: 2rem;
             height: 2rem;
         }
+        */
     }
-
 </style>

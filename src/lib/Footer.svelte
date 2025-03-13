@@ -4,6 +4,8 @@
     import Twitter from '../assets/Twitter.svg'
     import LinkedIn from '../assets/linkedIn.svg'
     import GitHub from '../assets/GitHub.svg'
+    export let contactPath = "/contact";
+    export let email = "jan.palenik@icloud.com";
 
     let isAnyIconHovered: boolean = false;
 
@@ -54,8 +56,8 @@
         <section class="footerRight">
             <h2 id="rightHeading">Let’s craft <span>your</span> standout <span>website</span></h2>
             <section class="button-section">
-                <button><a href="/contact">Get in touch</a></button>
-                <button><a href="mailto:jan.paleni@icloud.com">jan.palenik@icloud.com</a></button>
+                <button><a href={contactPath}>Get in touch</a></button>
+                <button><a href="{email}">{email}</a></button>
             </section>
         </section>
     </footer>
