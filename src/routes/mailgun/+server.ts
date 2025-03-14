@@ -15,7 +15,7 @@ export async function POST({ request }) {
     const data = await mg.messages.create(
       "sandboxfc7fa8bb89cc40d8a4854b5d57fa165c.mailgun.org",
       {
-        from: "Mailgun Sandbox <postmaster@sandboxfc7fa8bb89cc40d8a4854b5d57fa165c.mailgun.org>",
+        // from: "Mailgun Sandbox <postmaster@sandboxfc7fa8bb89cc40d8a4854b5d57fa165c.mailgun.org>",
         to: ["Jan Palenik <jan.palenik@icloud.com>"],
         subject: "Hello Jan Palenik",
         text: `Hello Jan Palenik, you have ${message} from ${name} (${email}) from ${organization} about ${service}.`,
