@@ -68,13 +68,13 @@
         position: relative;
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: 0.7rem;
         font-size: 1.3rem;
         font-weight: bold;
         background-color: #A4FF4F;
         border: none;
         border-radius: 3rem;
-        padding: 0.5rem 0.7rem;
+        padding: 0.5rem 0.9rem;
         cursor: pointer;
 
         /* Vortex blur additions */

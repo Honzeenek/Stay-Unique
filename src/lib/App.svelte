@@ -3,12 +3,14 @@
     import Nav from './Nav.svelte'
     import Hero from './Hero.svelte'
     import Footer from "./Footer.svelte";
+    import About from './About.svelte'
 </script>
 
   <main>
     <div class="glow-effect"></div>
     <Nav />
     <Hero />
+    <About />
     <Footer />
   </main>
 

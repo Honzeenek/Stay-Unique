@@ -53,7 +53,7 @@
         }
     }
     .hero {
-        height: 95vh;
+        height: 65vh;
         position: relative;
         top: 10rem;
         display: flex;
