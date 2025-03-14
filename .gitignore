@@ -33,3 +33,4 @@ vite.config.ts.timestamp-*
 
 # Test results
 test-results
+src/routes/mailgun/+server.ts

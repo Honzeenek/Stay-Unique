@@ -17,8 +17,9 @@
         service: string;
         message: string;
     }
-    const sendData = async (formData:FormData ) => {
-         const resp = await fetch('/mailgun', {
+
+    const sendData = async (formData: FormData) => {
+        const resp = await fetch('/mailgun', {
             method: 'POST',
             body: JSON.stringify(formData),
             headers: {
@@ -34,7 +35,7 @@
 
 <main>
     <div class="glow-effect"></div>
-    <Nav />
+    <Nav/>
     <section class="contact-content">
         <h1>Ready to enhance <br> your <span>WEB</span> game?</h1>
         <h2>Let's break the ice</h2>
@@ -42,19 +43,19 @@
             <div id="greenLine"></div>
             <label>
                 What's your name?
-                <input type="text" name="name" placeholder="John Doe" />
+                <input name="name" placeholder="John Doe" type="text"/>
             </label>
             <label>
                 What's your email?
-                <input type="email" name="email" placeholder="john.doe@email.com" />
+                <input name="email" placeholder="john.doe@email.com" type="email"/>
             </label>
             <label>
                 What's the name of your organization?
-                <input type="text" name="organization" placeholder="Pfizer" />
+                <input name="organization" placeholder="Pfizer" type="text"/>
             </label>
             <label>
                 What service are you looking for?
-                <input type="text" name="service" placeholder="Web Development / Web Design"/>
+                <input name="service" placeholder="Web Development / Web Design" type="text"/>
             </label>
             <label>
                 Your message
@@ -63,7 +64,7 @@
             <button type="submit">SUBMIT</button>
         </form>
     </section>
-    <Footer />
+    <Footer/>
     <p>{response}</p>
 </main>
 
@@ -73,6 +74,7 @@
         padding: 0 5.5rem;
         position: relative;
     }
+
     .glow-effect {
         position: absolute;
         opacity: 50%;
@@ -95,10 +97,11 @@
     .contact-content {
         display: flex;
         flex-direction: column;
-        padding: 5rem 0 ;
+        padding: 5rem 0;
         color: #ffffff;
         max-width: 600px;
         width: 100%;
+
         h1 {
             line-height: 120%;
             font-size: 3rem;
@@ -127,7 +130,7 @@
             label {
                 font-size: 1.5rem;
                 display: flex;
-                padding: 2.5rem 0 ;
+                padding: 2.5rem 0;
                 gap: 1rem;
                 flex-direction: column;
                 border: none;
@@ -144,6 +147,7 @@
                     outline: none;
                     padding: 1rem 0;
                 }
+
                 textarea {
                     resize: none;
                 }
@@ -152,9 +156,11 @@
                     border-bottom-color: #A4FF4F;
                 }
             }
+
             label:nth-child(6) {
                 border-bottom: none;
             }
+
             button {
                 font-family: inherit;
                 font-size: 1.5rem;
@@ -167,6 +173,7 @@
                 transition: transform 1.05s var(--elastic-ease);
                 -webkit-tap-highlight-color: transparent;
             }
+
             button:active {
                 transform: scaleX(0.955) scaleY(0.954)
             }
