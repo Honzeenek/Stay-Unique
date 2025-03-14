@@ -130,6 +130,9 @@
                     border-bottom-color: #A4FF4F;
                 }
             }
+            label:nth-child(6) {
+                border-bottom: none;
+            }
             button {
                 font-family: inherit;
                 font-size: 1.5rem;
@@ -139,10 +142,11 @@
                 border: none;
                 font-weight: bold;
                 cursor: pointer;
-                transition: 0.5s ease;
+                transition: transform 1.05s var(--elastic-ease);
+                -webkit-tap-highlight-color: transparent;
             }
-            button:hover {
-                transform: translateY(-5px);
+            button:active {
+                transform: scaleX(0.955) scaleY(0.954)
             }
         }
     }
