@@ -12,6 +12,7 @@
     <Hero />
     <About />
     <Footer />
+
   </main>
 
   <style>

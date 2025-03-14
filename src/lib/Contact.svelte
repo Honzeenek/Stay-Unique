@@ -2,9 +2,34 @@
     import Nav from './Nav.svelte';
     import Footer from './Footer.svelte';
 
-    const handleSubmit = (event: Event) => {
+    const handleSubmit = async (event: Event) => {
         event.preventDefault();
+        const form = event.target as HTMLFormElement;
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+        await sendData(data);
     }
+
+    interface FormData {
+        name: string;
+        email: string;
+        organization?: string;
+        service: string;
+        message: string;
+    }
+    const sendData = async (formData:FormData ) => {
+         const resp = await fetch('/mailgun', {
+            method: 'POST',
+            body: JSON.stringify(formData),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        const name = await resp.json();
+        response = name;
+    }
+
+    let response = '';
 </script>
 
 <main>
@@ -17,32 +42,29 @@
             <div id="greenLine"></div>
             <label>
                 What's your name?
-                <input type="text" placeholder="John Doe" />
+                <input type="text" name="name" placeholder="John Doe" />
             </label>
-<!--            <div class="line"></div>-->
             <label>
                 What's your email?
-                <input type="email" placeholder="john.doe@email.com" />
+                <input type="email" name="email" placeholder="john.doe@email.com" />
             </label>
-<!--            <div class="line"></div>-->
             <label>
                 What's the name of your organization?
-                <input type="text" placeholder="Pfizer" />
+                <input type="text" name="organization" placeholder="Pfizer" />
             </label>
-<!--            <div class="line"></div>-->
             <label>
                 What service are you looking for?
-                <input type="text" placeholder="Web Development / Web Design"/>
+                <input type="text" name="service" placeholder="Web Development / Web Design"/>
             </label>
-<!--            <div class="line"></div>-->
             <label>
                 Your message
-                <textarea placeholder="Hello Jan, I need help with..."></textarea>
+                <textarea name="message" placeholder="Hello Jan, I need help with..."></textarea>
             </label>
-            <button>SUBMIT</button>
+            <button type="submit">SUBMIT</button>
         </form>
     </section>
     <Footer />
+    <p>{response}</p>
 </main>
 
 
