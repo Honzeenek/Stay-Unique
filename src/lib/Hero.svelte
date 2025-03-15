@@ -1,7 +1,5 @@
 <script>
     import './reset.css'
-    import logo from '../assets/Layer 1.svg'
-    import circleLogo from '../assets/logo circle.svg'
     import HeroButton from './HeroButton.svelte'
 </script>
 
@@ -10,17 +8,22 @@
         <h2 class="hero-name">Stay Unique</h2>
         <h1 class='hero-text'>WEB ENGINEER</h1>
         <h2 class='motto-line'>
-            Your <span class="motto-span">website</span>, made to impress. Custom. Fast. Flawless. Done for <span class="motto-span">you</span>
+            Your <span class="motto-span">website</span>, made to impress. Custom. Fast. Flawless. Done for <span
+                class="motto-span">you</span>
         </h2>
-<!--        <button class='hero-button'>-->
-<!--            <img id='button-logo' src={circleLogo} alt="logo">-->
-<!--            Get Your Website-->
-<!--        </button>-->
-        <HeroButton />
+        <!--        <button class='hero-button'>-->
+        <!--            <img id='button-logo' src={circleLogo} alt="logo">-->
+        <!--            Get Your Website-->
+        <!--        </button>-->
+        <HeroButton/>
     </section>
 </main>
 
 <style>
+    main {
+        height: 48vh;
+    }
+
     :root {
         --elastic-ease-out: linear(
                 0,
@@ -44,6 +47,7 @@
                 1
         );
     }
+
     @keyframes fadeIn {
         from {
             opacity: 0;
@@ -52,8 +56,8 @@
             opacity: 1;
         }
     }
+
     .hero {
-        height: 65vh;
         position: relative;
         top: 10rem;
         display: flex;
@@ -68,6 +72,7 @@
             font-weight: normal;
             color: #ffffff;
         }
+
         .hero-text {
             user-select: none;
             font-weight: bold;
@@ -76,13 +81,13 @@
             letter-spacing: -0.02em;
             background: linear-gradient(
                     to bottom,
-                    #ffffff 60%, rgba(0, 0, 0, 0.6)
-                    90%);
+                    #ffffff 60%, rgba(0, 0, 0, 0.6) 90%);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
             -webkit-text-fill-color: transparent;
         }
+
         .motto-line {
             user-select: none;
             position: relative;
@@ -94,6 +99,7 @@
             width: 35%;
             line-height: 1.45;
         }
+
         .motto-span {
             color: #A4FF4F;
             font-weight: normal;

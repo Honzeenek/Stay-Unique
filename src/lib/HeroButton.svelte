@@ -80,7 +80,7 @@
         /* Vortex blur additions */
         transition: transform 1.05s var(--elastic-ease);
         -webkit-tap-highlight-color: transparent;
-        filter: drop-shadow(0 2px 7px rgb(164, 255, 79));
+        filter: drop-shadow(0 4px 6px rgb(164, 255, 79));
     }
 
     .hero-button:active {
