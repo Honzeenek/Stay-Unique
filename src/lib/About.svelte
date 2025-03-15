@@ -8,8 +8,7 @@
     <section>
         <p id="background">ABOUT</p>
         <section class="heading">
-            <h2>About <span id="me">Me</span></h2>
-            <h3 class="section-undertitle">The still moving pathway to knowledge</h3>
+            <h2>Hi, My Name is <span id="me">Jan</span></h2>
         </section>
 
         <section class="content">
