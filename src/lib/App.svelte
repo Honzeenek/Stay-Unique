@@ -11,7 +11,6 @@
     <div class="glow-effect"></div>
     <Nav/>
     <Hero/>
-    <AboutGrid/>
     <About/>
     <Footer/>
 
