@@ -60,7 +60,7 @@
         width: 20rem;
         padding-right: 2.5rem;
         padding-bottom: 2.5rem;
-        border-right: 1px solid #505050;
+        /*border-right: 1px solid #505050;*/
 
         img {
             height: auto;
@@ -81,8 +81,7 @@
     }
 
     .bot-row {
-        border-top: 1px solid #505050;
-        padding-top: 2.5rem;
+        /*border-top: 1px solid #505050;*/
         padding-bottom: 0;
     }
 
@@ -94,9 +93,6 @@
         color: #A4FF4F;
     }
 
-    .left-column {
-        padding-left: 2.5rem;
-    }
 
     /* Add responsive styles for smaller screens */
     @media (max-width: 768px) {
