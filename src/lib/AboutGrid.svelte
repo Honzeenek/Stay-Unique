@@ -1,8 +1,9 @@
 <script lang="ts">
-    import Checkmark from '../assets/checkmark.svg';
-    import Handshake from '../assets/Handshake.svg'
-    import GraduateHat from '../assets/LearnCap.svg'
-    import Shield from '../assets/Shield.svg'
+    import Checkmark from '../assets/Checkmark.svg';
+    import Handshake from '../assets/Handshake.svg';
+    import GraduateHat from '../assets/LearnCap.svg';
+    import Shield from '../assets/Shield.svg';
+    import './reset.css'
 </script>
 
 <main>
