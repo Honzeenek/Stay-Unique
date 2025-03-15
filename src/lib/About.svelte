@@ -13,7 +13,7 @@
 
         <section class="content">
             <article>
-                <h3 id="articleheading">Jan Páleník</h3>
+                <h3 id="articleheading">My Qualities</h3>
                 <AboutGrid/>
             </article>
             <section class="picturesection">
