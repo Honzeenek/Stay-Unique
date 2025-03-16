@@ -1,21 +1,21 @@
-<script>
+<script lang="ts">
     import './reset.css'
     import logo from '../assets/logo.svg'
     import Contact from './Contact.svelte'
-    import { page } from '$app/stores'
+    import {page} from '$app/stores'
 </script>
 
 <nav>
     <ul>
         <div class="nav-left">
             <li><a href="/" data-sveltekit-preload-data="hover"><img alt="logo" src={logo} class="logo"></a></li>
-            <li class="navItem"><a class="list-items-a" href="...">About</a></li>
+            <li class="navItem"><a class="list-items-a" href="/#about">About</a></li>
             <li class="navItem"><a class="list-items-a" href="...">Work</a></li>
             <li class="navItem">
                 <a
-                    class={$page.url.pathname === '/contact' ? 'list-items-a active' : 'list-items-a'}
-                    id="contact" href="/contact"
-                    data-sveltekit-preload-data="hover"
+                        class={$page.url.pathname === '/contact' ? 'list-items-a active' : 'list-items-a'}
+                        id="contact" href="/contact"
+                        data-sveltekit-preload-data="hover"
                 >
                     Contact
                 </a>
@@ -72,7 +72,7 @@
 
     .nav-left:has(.list-items-a:hover) .active::after {
         transform: scaleX(0) !important;
-        transition: transform .6s cubic-bezier(.19,1,.22,1);
+        transition: transform .6s cubic-bezier(.19, 1, .22, 1);
     }
 
     .list-items-a:hover {
@@ -88,7 +88,7 @@
         border-top: 2px solid #A4FF4F;
         transform: scaleX(0);
         transform-origin: left center;
-        transition: transform .6s cubic-bezier(.19,1,.22,1);
+        transition: transform .6s cubic-bezier(.19, 1, .22, 1);
     }
 
     .list-items-a:hover::after {

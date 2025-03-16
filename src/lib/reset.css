@@ -126,3 +126,7 @@ table {
 button {
     user-select: none;
 }
+
+html {
+    scroll-behavior: smooth;
+}

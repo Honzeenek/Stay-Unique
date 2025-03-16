@@ -4,21 +4,12 @@
     import Twitter from '../assets/Twitter.svg'
     import LinkedIn from '../assets/linkedIn.svg'
     import GitHub from '../assets/GitHub.svg'
+
     export let contactPath = "/contact";
     export let email = "jan.palenik@icloud.com";
 
-    let isAnyIconHovered: boolean = false;
-
-    const handleIconHover = (event: MouseEvent, entering: boolean) => {
-        const ul = document.querySelector('.footerLeft ul') as HTMLUListElement | null;
-        if(ul) {
-            if (entering) {
-                ul.classList.add('icons-hovered');
-            } else {
-                ul.classList.remove('icons-hovered');
-            }
-        }
-    }
+    // Use a reactive variable instead of DOM manipulation
+    let isIconHovered = false;
 </script>
 
 <main>
@@ -35,26 +26,26 @@
             <p id="motto">Design has always fulfilled me,<br>
                 making it interactive is my passion.
             </p>
-            <ul>
+            <ul class:icons-hovered={isIconHovered}>
                 <li class="socialIcons"
-                    on:mouseenter={(e) => handleIconHover(e, true)}
-                    on:mouseleave={(e) => handleIconHover(e, false)}>
-                    <a href="https://x.com/honzeenek" target="_blank"><img src={Twitter} alt="Twitter" /></a>
+                    on:mouseenter={() => isIconHovered = true}
+                    on:mouseleave={() => isIconHovered = false}>
+                    <a href="https://x.com/honzeenek" target="_blank"><img src={Twitter} alt="Twitter"/></a>
                 </li>
                 <li class="socialIcons"
-                    on:mouseenter={(e) => handleIconHover(e, true)}
-                    on:mouseleave={(e) => handleIconHover(e, false)}>
-                    <a href="..."><img src={LinkedIn} alt="LinkedIn" /></a>
+                    on:mouseenter={() => isIconHovered = true}
+                    on:mouseleave={() => isIconHovered = false}>
+                    <a href="..."><img src={LinkedIn} alt="LinkedIn"/></a>
                 </li>
                 <li class="socialIcons"
-                    on:mouseenter={(e) => handleIconHover(e, true)}
-                    on:mouseleave={(e) => handleIconHover(e, false)}>
-                    <a href="https://github.com/Honzeenek" target="_blank"><img src={GitHub} alt="GitHub" /></a>
+                    on:mouseenter={() => isIconHovered = true}
+                    on:mouseleave={() => isIconHovered = false}>
+                    <a href="https://github.com/Honzeenek" target="_blank"><img src={GitHub} alt="GitHub"/></a>
                 </li>
             </ul>
         </section>
         <section class="footerRight">
-            <h2 id="rightHeading">Let’s craft <span>your</span> standout <span>website</span></h2>
+            <h2 id="rightHeading">Let's craft <span>your</span> standout <span>website</span></h2>
             <section class="button-section">
                 <button><a href={contactPath}>Get in touch</a></button>
                 <button><a href="{email}">{email}</a></button>
@@ -66,8 +57,6 @@
         <div class="copyrightLine"></div>
         <p> Copyright &copy; Jan Páleník. All rights reserved.</p>
     </section>
-
-
 </main>
 
 <style>
@@ -101,10 +90,12 @@
         justify-content: space-between;
         height: 20vh;
         padding-top: 2rem;
+
         h2 {
             font-size: 1rem;
             font-weight: bold;
         }
+
         .footerLeft {
             display: flex;
             flex-direction: column;
@@ -134,6 +125,7 @@
                 gap: 2.5rem;
 
                 /* Apply the gray filter to all icons when any icon is hovered */
+
                 &:has(.socialIcons:hover) .socialIcons a img {
                     filter: opacity(0.5);
                 }
@@ -152,6 +144,7 @@
                         transition: 1.3s var(--elastic-ease-out);
 
                         /* Keep the hovered icon white */
+
                         a img {
                             filter: opacity(1) !important;
                         }
@@ -166,7 +159,7 @@
                         border-top: 2px solid #A4FF4F;
                         transform: scaleX(0);
                         transform-origin: left center;
-                        transition: transform .6s cubic-bezier(.19,1,.22,1);
+                        transition: transform .6s cubic-bezier(.19, 1, .22, 1);
                     }
 
                     &:hover::after {
@@ -177,6 +170,7 @@
             }
         }
     }
+
     .footerRight {
         display: flex;
         flex-direction: column;
@@ -195,7 +189,7 @@
             background-color: #000000;
             border: none;
             color: white;
-            padding: 1rem 2rem ;
+            padding: 1rem 2rem;
             border-radius: 1rem;
             font-size: 1rem;
             font-weight: bold;
@@ -203,6 +197,7 @@
             cursor: pointer;
             position: relative;
         }
+
         button:hover {
             transform: translateY(-3px);
 
@@ -219,14 +214,15 @@
         .copyrightLine {
             border: 1px solid transparent;
             background: linear-gradient(
-                to right,
-                #000000 0%,
-                #2A2A2A 50%,
-                #000000 100%
+                    to right,
+                    #000000 0%,
+                    #2A2A2A 50%,
+                    #000000 100%
             );
             height: 1px;
             width: 50%;
         }
+
         p {
             color: #828282;
             padding: 1rem;
