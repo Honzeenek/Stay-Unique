@@ -8,41 +8,50 @@
 </script>
 
 <main>
-    <div class="glow-effect"></div>
+    <!--    <div class="glow-effect"></div>-->
+    <div class="corner-glow-effect"></div>
     <Nav/>
     <Hero/>
     <About/>
     <Footer/>
-
 </main>
 
 <style>
     main {
         padding: 0 5.5rem;
         position: relative;
+        overflow-x: hidden;
     }
 
-    .glow-effect {
+    /*.glow-effect {*/
+    /*    position: absolute;*/
+    /*    opacity: 50%;*/
+    /*    top: 0;*/
+    /*    left: 50%;*/
+    /*    transform: translateX(-50%);*/
+    /*    width: 60vw;*/
+    /*    height: 70px;*/
+    /*    background: radial-gradient(*/
+    /*            ellipse at center top,*/
+    /*            rgba(255, 255, 255, 0.7) 0%,*/
+    /*            rgba(255, 255, 255, 0.4) 20%,*/
+    /*            rgba(255, 255, 255, 0) 60%*/
+    /*    );*/
+    /*    pointer-events: none;*/
+    /*    z-index: 1;*/
+    /*}*/
+
+    .corner-glow-effect {
         position: absolute;
-        opacity: 50%;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 60vw;
-        height: 70px;
-        background: radial-gradient(
-                ellipse at center top,
-                rgba(255, 255, 255, 0.7) 0%,
-                rgba(255, 255, 255, 0.4) 20%,
-                rgba(255, 255, 255, 0) 60%
-        );
-        /*radial-gradient(*/
-        /*        ellipse at center top,*/
-        /*        rgb(70, 153, 255) 0%,*/
-        /*        rgba(70, 153, 255, 0.75) 20%,*/
-        /*        rgba(70, 153, 255, 0) 60%*/
-        /*);*/
-        pointer-events: none;
-        z-index: 1;
+        top: -630px;
+        left: 1400px;
+        width: 46.05288rem;
+        height: 65.88181rem;
+        transform: rotate(36.203deg);
+        flex-shrink: 0;
+        border-radius: 67.88181rem;
+        opacity: 0.61;
+        background: #4297FF;
+        filter: blur(151px);
     }
 </style>

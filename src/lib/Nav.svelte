@@ -1,16 +1,37 @@
 <script lang="ts">
     import './reset.css'
     import logo from '../assets/logo.svg'
-    import Contact from './Contact.svelte'
     import {page} from '$app/stores'
+    import {onMount} from 'svelte';
+
+    let scrollY = 0;
+    let isSticky = false;
+    let navElement: HTMLElement;
+
+    onMount(() => {
+        const handleScroll = () => {
+            scrollY = window.scrollY;
+            isSticky = scrollY > 250;
+        }
+
+        handleScroll();
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        }
+    })
 </script>
 
-<nav>
-    <ul>
-        <div class="nav-left">
+<svelte:window bind:scrollY/>
+
+<div class="nav-wrapper" class:sticky={isSticky}>
+    <nav bind:this={navElement} class:docked={isSticky}>
+        <ul>
             <li><a href="/" data-sveltekit-preload-data="hover"><img alt="logo" src={logo} class="logo"></a></li>
             <li class="navItem"><a class="list-items-a" href="/#about">About</a></li>
-            <li class="navItem"><a class="list-items-a" href="...">Work</a></li>
+            <li class="navItem"><a class="list-items-a" href="/#work">Work</a></li>
             <li class="navItem">
                 <a
                         class={$page.url.pathname === '/contact' ? 'list-items-a active' : 'list-items-a'}
@@ -20,35 +41,64 @@
                     Contact
                 </a>
             </li>
-        </div>
-        <p>Jan Páleník</p>
-    </ul>
-</nav>
+        </ul>
+    </nav>
+</div>
 
 <style>
+    .nav-wrapper {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
     nav {
         margin-top: 0;
         color: #fff;
-        background-color: black;
         padding: 1rem 0;
         position: relative;
         top: 3rem;
+        background: transparent;
+        width: 100%;
+        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        border: 1px solid rgba(255, 255, 255, 0); /* Transparent border initially */
+    }
+
+    nav.docked {
+        position: fixed;
+        top: 0.6rem;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        padding: 0.75rem 3rem;
+        border-radius: 5rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background-color: rgba(0, 0, 0, 0.79);
+        width: auto;
+        max-width: 600px;
+        backdrop-filter: blur(8px);
     }
 
     ul {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        gap: 25px;
         position: relative;
         z-index: 2;
+        padding: 0 2rem;
     }
 
-    .nav-left {
-        display: flex;
-        align-items: center;
-        gap: 25px;
-    }
 
     ul p {
         margin-left: auto;
@@ -85,7 +135,7 @@
         left: -4px;
         right: -4px;
         position: absolute;
-        border-top: 2px solid #A4FF4F;
+        border-top: 2px solid #4297ff;
         transform: scaleX(0);
         transform-origin: left center;
         transition: transform .6s cubic-bezier(.19, 1, .22, 1);

@@ -1,20 +1,21 @@
 <script>
     import './reset.css'
     import HeroButton from './HeroButton.svelte'
+    import Particles from '$lib/Particles.svelte';
+    // Remove the unnecessary import of tsParticles
 </script>
 
 <main>
     <section class='hero'>
+        <div class="particles-container">
+            <Particles/>
+        </div>
         <h2 class="hero-name">Stay Unique</h2>
         <h1 class='hero-text'>WEB ENGINEER</h1>
         <h2 class='motto-line'>
             Your <span class="motto-span">website</span>, made to impress. Custom. Fast. Flawless. Done for <span
                 class="motto-span">you</span>
         </h2>
-        <!--        <button class='hero-button'>-->
-        <!--            <img id='button-logo' src={circleLogo} alt="logo">-->
-        <!--            Get Your Website-->
-        <!--        </button>-->
         <HeroButton/>
     </section>
 </main>
@@ -57,89 +58,69 @@
         }
     }
 
+    .particles-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 0;
+    }
+
     .hero {
         position: relative;
         top: 10rem;
         display: flex;
         flex-direction: column;
         align-items: center;
-        opacity: 0; /* Start with the element hidden */
-        animation: fadeIn 1s ease-in-out forwards; /* 2s duration, ease-in-out timing function */
+        opacity: 0;
+        animation: fadeIn 1s ease-in-out forwards;
+    }
 
-        .hero-name {
-            user-select: none;
-            font-size: 1.5rem;
-            font-weight: normal;
-            color: #ffffff;
-        }
+    .hero-name, .hero-text, .motto-line {
+        position: relative;
+        z-index: 5;
+    }
 
-        .hero-text {
-            user-select: none;
-            font-weight: bold;
-            font-size: 8rem;
-            line-height: 1.3;
-            letter-spacing: -0.02em;
-            background: linear-gradient(
-                    to bottom,
-                    #ffffff 60%, rgba(0, 0, 0, 0.6) 90%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            -webkit-text-fill-color: transparent;
-        }
+    .hero-name {
+        user-select: none;
+        font-size: 1.5rem;
+        font-weight: normal;
+        color: #ffffff;
+    }
 
-        .motto-line {
-            user-select: none;
-            position: relative;
-            top: -2rem;
-            font-size: 1.5rem;
-            font-weight: normal;
-            text-align: center;
-            margin-top: 1rem;
-            width: 35%;
-            line-height: 1.45;
-        }
+    .hero-text {
+        user-select: none;
+        font-weight: bold;
+        font-size: 8rem;
+        line-height: 1.3;
+        letter-spacing: -0.02em;
+        background: linear-gradient(
+                to bottom,
+                #ffffff 60%, rgba(0, 0, 0, 0.6) 90%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+    }
 
-        .motto-span {
-            color: #A4FF4F;
-            font-weight: normal;
-        }
+    .motto-line {
+        user-select: none;
+        position: relative;
+        top: -2rem;
+        font-size: 1.5rem;
+        font-weight: normal;
+        text-align: center;
+        margin-top: 1rem;
+        width: 35%;
+        line-height: 1.45;
+    }
 
-        /* Unused button styles - commenting out as the button is now a component */
-        /*
-        .hero-button {
-            user-select: none;
-            position: relative;
-            top: 0;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            font-size: 1.3rem;
-            font-weight: bold;
-            background-color: #A4FF4F;
-            border: none;
-            border-radius: 3rem;
-            padding: 0.5rem 0.7rem;
-            transition: transform 0.3s ease, filter 0.3s ease;
-            filter: drop-shadow(0 2px 7px rgb(164, 255, 79));
-            cursor: pointer;
-            opacity: 0;
-            animation: fadeIn 1.5s ease-in-out forwards;
-        }
-        .hero-button:hover {
-            transform: translateY(-5px);
-            filter: drop-shadow(0 8px 20px rgb(164, 255, 79));
-        }
-        .hero-button:hover #button-logo {
-            filter: hue-rotate(45deg) brightness(1.2);
-        }
-        .hero-button span {
-            color: black;
-        }
-        #button-logo {
-            width: 2rem;
-            height: 2rem;
-        }
-        */
+    .motto-span {
+        color: #4297ff;
+        font-weight: normal;
+        position: relative;
+        z-index: 5;
     }
 </style>

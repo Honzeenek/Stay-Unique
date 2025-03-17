@@ -67,11 +67,12 @@
     .hero-button {
         position: relative;
         display: flex;
+        color: white;
         align-items: center;
         gap: 0.7rem;
         font-size: 1.3rem;
         font-weight: bold;
-        background-color: #A4FF4F;
+        background-color: #4297FF;
         border: none;
         border-radius: 3rem;
         padding: 0.5rem 0.9rem;
@@ -80,7 +81,7 @@
         /* Vortex blur additions */
         transition: transform 1.05s var(--elastic-ease);
         -webkit-tap-highlight-color: transparent;
-        filter: drop-shadow(0 4px 6px rgb(164, 255, 79));
+        filter: drop-shadow(0 4px 6px rgb(66, 151, 255));
     }
 
     .hero-button:active {

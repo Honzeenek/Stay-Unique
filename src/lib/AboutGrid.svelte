@@ -91,7 +91,12 @@
     }
 
     .greenspan {
-        color: #A4FF4F;
+        background: linear-gradient(83deg, #A4FF4F 47%, #61C900 68.34%, #9DF748 92.83%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-style: normal;
+        line-height: 150%;
     }
 
 
