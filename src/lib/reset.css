@@ -100,8 +100,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
-    background-color: black;
-    line-height: 1;
+    background: linear-gradient(187deg, #090909 0.36%, #0A1523 122.35%);
 }
 
 ol, ul {
