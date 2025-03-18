@@ -8,19 +8,18 @@
     let isSticky = false;
     let navElement: HTMLElement;
 
+
     onMount(() => {
         const handleScroll = () => {
             scrollY = window.scrollY;
-            isSticky = scrollY > 250;
-        }
+            isSticky = window.scrollY > 250;
+        };
 
         handleScroll();
 
         window.addEventListener('scroll', handleScroll);
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        }
+        return () => window.removeEventListener('scroll', handleScroll);
     })
 </script>
 
@@ -135,7 +134,7 @@
         left: -4px;
         right: -4px;
         position: absolute;
-        border-top: 2px solid #4297ff;
+        border-top: 2px solid #23ce6b;
         transform: scaleX(0);
         transform-origin: left center;
         transition: transform .6s cubic-bezier(.19, 1, .22, 1);

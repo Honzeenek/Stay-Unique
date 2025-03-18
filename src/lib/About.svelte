@@ -65,7 +65,7 @@
             padding: 0;
 
             #me {
-                background: linear-gradient(83deg, #A4FF4F 47%, #61C900 68.34%, #9DF748 92.83%);
+                background: linear-gradient(83deg, #23ce6b 47%, #23ce6b 68.34%, #23ce6b 92.83%);
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
@@ -107,7 +107,7 @@
     #articleheading {
         padding-bottom: 1rem;
         font-size: 2rem;
-        border-bottom: 1px solid #A4FF4F;
+        border-bottom: 1px solid #b4cded;
     }
 
     .picturesection {

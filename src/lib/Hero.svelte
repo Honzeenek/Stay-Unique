@@ -13,8 +13,7 @@
         <h2 class="hero-name">Stay Unique</h2>
         <h1 class='hero-text'>WEB ENGINEER</h1>
         <h2 class='motto-line'>
-            Your <span class="motto-span">website</span>, made to impress. Custom. Fast. Flawless. Done for <span
-                class="motto-span">you</span>
+            The BIG step towards meeting your goals on the internet.
         </h2>
         <HeroButton/>
     </section>
@@ -22,7 +21,7 @@
 
 <style>
     main {
-        height: 48vh;
+        height: 50vh;
     }
 
     :root {

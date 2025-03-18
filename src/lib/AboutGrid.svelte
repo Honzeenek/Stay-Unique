@@ -91,7 +91,7 @@
     }
 
     .greenspan {
-        background: linear-gradient(83deg, #A4FF4F 47%, #61C900 68.34%, #9DF748 92.83%);
+        background: linear-gradient(83deg, #44f891 47%, #23ce6b 68.34%, #12c966 92.83%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;

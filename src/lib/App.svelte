@@ -51,7 +51,7 @@
         flex-shrink: 0;
         border-radius: 67.88181rem;
         opacity: 0.61;
-        background: #4297FF;
+        background: #52ffb8;
         filter: blur(151px);
     }
 </style>

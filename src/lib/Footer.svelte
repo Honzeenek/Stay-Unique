@@ -75,13 +75,9 @@
 
     .line {
         border: 1px solid transparent;
-        background: linear-gradient(
-                to right,
-                #000000 0%,
-                #2A2A2A 50%,
-                #000000 100%
-        );
+        background: rgba(180, 205, 237, 0.6);
         height: 1px;
+        border-radius: 1rem;
         width: 100%;
     }
 
@@ -213,12 +209,8 @@
 
         .copyrightLine {
             border: 1px solid transparent;
-            background: linear-gradient(
-                    to right,
-                    #000000 0%,
-                    #2A2A2A 50%,
-                    #000000 100%
-            );
+            border-radius: 1rem;
+            background: rgba(180, 205, 237, 0.6);
             height: 1px;
             width: 50%;
         }
