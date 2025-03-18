@@ -65,6 +65,8 @@
         height: 100%;
         overflow: hidden;
         z-index: 0;
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+        -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
     }
 
     .hero {
