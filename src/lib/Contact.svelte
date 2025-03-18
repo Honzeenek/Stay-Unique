@@ -97,7 +97,7 @@
     .contact-content {
         display: flex;
         flex-direction: column;
-        padding: 5rem 0;
+        padding: 13rem 0;
         color: #ffffff;
         max-width: 600px;
         width: 100%;
@@ -109,14 +109,14 @@
             padding: 0 0 1rem 0;
 
             span {
-                color: #A4FF4F;
+                color: #23CE6B;
             }
         }
 
         h2 {
             font-size: 1.5rem;
             padding: 2rem 0;
-            border-bottom: #A4FF4F 1px solid;
+            border-bottom: #b4cded 1px solid;
             width: 100%;
             transition: background 0.5s ease-in;
         }
@@ -153,7 +153,7 @@
                 }
 
                 &:has(input:focus) {
-                    border-bottom-color: #A4FF4F;
+                    border-bottom-color: #23ce6b;
                 }
             }
 
@@ -164,7 +164,7 @@
             button {
                 font-family: inherit;
                 font-size: 1.5rem;
-                background: #A4FF4F;
+                background: #23ce6b;
                 border-radius: 1rem;
                 padding: 1rem 0;
                 border: none;

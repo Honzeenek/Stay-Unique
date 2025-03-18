@@ -13,7 +13,7 @@
         <h2 class="hero-name">Stay Unique</h2>
         <h1 class='hero-text'>WEB ENGINEER</h1>
         <h2 class='motto-line'>
-            The BIG step towards meeting your goals on the internet.
+            The <span class="motto-span">BIG</span> step towards meeting your goals on the internet.
         </h2>
         <HeroButton/>
     </section>
@@ -68,13 +68,18 @@
     }
 
     .hero {
-        position: relative;
-        top: 10rem;
+        padding: 13rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         opacity: 0;
         animation: fadeIn 1s ease-in-out forwards;
+
+        .motto-span {
+            color: #12c966;
+            font-weight: bold;
+            font-size: 1.9rem;
+        }
     }
 
     .hero-name, .hero-text, .motto-line {
@@ -92,12 +97,12 @@
     .hero-text {
         user-select: none;
         font-weight: bold;
-        font-size: 8rem;
+        font-size: 10rem;
         line-height: 1.3;
         letter-spacing: -0.02em;
         background: linear-gradient(
                 to bottom,
-                #ffffff 60%, rgba(0, 0, 0, 0.6) 90%);
+                #ffffff 75%, rgba(0, 0, 0, 0.6) 90%);
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;

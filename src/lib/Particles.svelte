@@ -22,7 +22,7 @@
                 },
                 particles: {
                     number: {
-                        value: 60,
+                        value: 100,
                         density: {
                             enable: true,
                         },

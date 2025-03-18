@@ -65,12 +65,11 @@
     }
 
     .hero-button {
-        position: relative;
         display: flex;
-        color: #0d1821;
+        color: white;
         align-items: center;
         gap: 0.7rem;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         font-weight: bold;
         background-color: #23ce6b;
         border: none;

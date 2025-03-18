@@ -12,7 +12,7 @@
     onMount(() => {
         const handleScroll = () => {
             scrollY = window.scrollY;
-            isSticky = window.scrollY > 250;
+            isSticky = window.scrollY > 130;
         };
 
         handleScroll();
@@ -65,9 +65,7 @@
     nav {
         margin-top: 0;
         color: #fff;
-        padding: 1rem 0;
-        position: relative;
-        top: 3rem;
+        padding: 4rem 0;
         background: transparent;
         width: 100%;
         transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -95,7 +93,6 @@
         gap: 25px;
         position: relative;
         z-index: 2;
-        padding: 0 2rem;
     }
 
 
