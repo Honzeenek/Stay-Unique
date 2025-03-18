@@ -74,6 +74,9 @@
         align-items: center;
         opacity: 0;
         animation: fadeIn 1s ease-in-out forwards;
+        position: relative;
+        height: 100%;
+        overflow: hidden;
 
         .motto-span {
             color: #12c966;
