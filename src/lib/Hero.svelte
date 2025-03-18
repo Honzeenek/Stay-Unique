@@ -21,7 +21,7 @@
 
 <style>
     main {
-        height: 50vh;
+        height: 70vh;
     }
 
     :root {
@@ -78,7 +78,7 @@
         .motto-span {
             color: #12c966;
             font-weight: bold;
-            font-size: 1.9rem;
+            font-size: 2.3rem;
         }
     }
 
@@ -89,7 +89,7 @@
 
     .hero-name {
         user-select: none;
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: normal;
         color: #ffffff;
     }
@@ -113,11 +113,10 @@
         user-select: none;
         position: relative;
         top: -2rem;
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: normal;
         text-align: center;
         margin-top: 1rem;
-        width: 35%;
         line-height: 1.45;
     }
 

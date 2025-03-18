@@ -31,12 +31,11 @@
     }
 
     main {
-        height: 140vh;
 
         #background {
             user-select: none;
             position: relative;
-            top: 12rem;
+            top: 6rem;
             opacity: 0.2;
             z-index: -1;
             padding: 0;
@@ -107,7 +106,7 @@
     #articleheading {
         padding-bottom: 1rem;
         font-size: 2rem;
-        border-bottom: 1px solid #b4cded;
+        border-bottom: 1px solid #23ce6b;
     }
 
     .picturesection {
