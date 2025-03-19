@@ -173,7 +173,7 @@
         align-items: start;
 
         span {
-            color: #A4FF4F;
+            color: #23ce6b;
         }
 
         #rightHeading {
