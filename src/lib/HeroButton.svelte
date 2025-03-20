@@ -71,7 +71,7 @@
         gap: 0.7rem;
         font-size: 1.5rem;
         font-weight: bold;
-        background-color: #6b5bff;
+        background-color: #23ce6b;
         border: none;
         border-radius: 3rem;
         padding: 0.5rem 0.9rem;

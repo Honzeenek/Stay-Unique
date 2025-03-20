@@ -131,7 +131,7 @@
         left: -4px;
         right: -4px;
         position: absolute;
-        border-top: 2px solid #6b5bff;
+        border-top: 2px solid #23ce6b;
         transform: scaleX(0);
         transform-origin: left center;
         transition: transform .6s cubic-bezier(.19, 1, .22, 1);
