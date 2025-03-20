@@ -38,12 +38,12 @@
                         random: false,
                     },
                     size: {
-                        value: 2,
+                        value: 1,
                         random: false,
                     },
                     move: {
                         enable: true,
-                        speed: 0.7,
+                        speed: 0.9,
                         direction: 'none',
                         random: true,
                         straight: false,
