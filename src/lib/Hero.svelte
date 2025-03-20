@@ -85,7 +85,7 @@
         overflow: hidden;
 
         .motto-span {
-            color: #12c966;
+            color: #6b5bff;
             font-weight: bold;
             font-size: 2.3rem;
         }
