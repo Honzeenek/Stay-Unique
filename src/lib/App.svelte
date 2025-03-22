@@ -5,6 +5,8 @@
     import Footer from "./Footer.svelte";
     import About from './About.svelte'
     import AboutGrid from './AboutGrid.svelte'
+
+    
 </script>
 
 <main>
@@ -25,6 +27,31 @@
         overflow-x: hidden;
     }
 
+    /* Animation keyframes for glow elements */
+    @keyframes glowIn {
+        0% {
+            opacity: 0;
+            transform: scale(0.6) rotate(-75deg);
+            filter: blur(120px);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1) rotate(-75deg);
+            filter: blur(151px);
+        }
+    }
+
+    @keyframes cornerGlowIn {
+        0% {
+            opacity: 0;
+            transform: scale(0.7) rotate(36.203deg);
+        }
+        100% {
+            opacity: 0.2;
+            transform: scale(1) rotate(36.203deg);
+        }
+    }
+
     /*.glow-effect {*/
     /*    position: absolute;*/
     /*    opacity: 50%;*/
@@ -43,7 +70,7 @@
     /*    z-index: 1;*/
     /*}*/
 
-    /* .corner-glow-effect {
+    .corner-glow-effect {
         position: absolute;
         top: -530px;
         left: 1600px;
@@ -52,10 +79,11 @@
         transform: rotate(36.203deg);
         flex-shrink: 0;
         border-radius: 67.88181rem;
-        opacity: 0.2; */
-        /* background: #7ab5fd; */
-        /* filter: blur(151px);
-    } */
+        opacity: 0;
+        background: #7ab5fd;
+        filter: blur(151px);
+        animation: cornerGlowIn 1.5s ease-out forwards;
+    }
 
     .second-glow {
         position: absolute;
@@ -64,12 +92,27 @@
         right: -100px;
         width: 30rem;
         height: 30rem;
-        transform: rotate(-75deg);
         background: #7ab5fd;
         border-radius: 50%;
         background: linear-gradient(135deg,#3c93fd 0%, #ffffff 100%); 
         filter: blur(151px);
+        opacity: 0;
+        animation: glowIn 2s ease-out forwards;
         /* background: radial-gradient(circle, rgba(255,255,255,1) 4%, rgba(119,213,255,0.5172443977591037) 29%, rgba(0,212,255,0) 100%);
         pointer-events: none; */
+    }
+
+    .third-glow {
+        position: absolute;
+        overflow: visible;
+        bottom: 20%;
+        left: -150px;
+        width: 25rem;
+        height: 25rem;
+        background: linear-gradient(135deg, #44a3ff 0%, #b3d9fd 100%);
+        border-radius: 50%;
+        filter: blur(140px);
+        opacity: 0;
+        animation: glowIn 2.5s ease-out 0.3s forwards;
     }
 </style>
