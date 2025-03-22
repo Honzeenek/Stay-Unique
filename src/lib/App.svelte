@@ -65,9 +65,11 @@
         width: 30rem;
         height: 30rem;
         transform: rotate(-75deg);
-        /* background: #7ab5fd; */
-        /* background: linear-gradient(135deg,#3c93fd 0%, #ffffff 100%); */
-        background: radial-gradient(circle, rgba(255,255,255,1) 4%, rgba(119,213,255,0.5172443977591037) 29%, rgba(0,212,255,0) 100%);
-        pointer-events: none;
+        background: #7ab5fd;
+        border-radius: 50%;
+        background: linear-gradient(135deg,#3c93fd 0%, #ffffff 100%); 
+        filter: blur(151px);
+        /* background: radial-gradient(circle, rgba(255,255,255,1) 4%, rgba(119,213,255,0.5172443977591037) 29%, rgba(0,212,255,0) 100%);
+        pointer-events: none; */
     }
 </style>

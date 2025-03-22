@@ -36,6 +36,7 @@
         padding: 1.5rem 0;
         position: fixed;
         top: 1rem;
+        font-size: 1rem;
         left: 5.5rem;
         background: transparent;
         transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -97,7 +98,7 @@
         left: -4px;
         right: -4px;
         position: absolute;
-        border-top: 2px solid #FF8C42;
+        border-top: 2px solid #B4CDED;
         transform: scaleX(0);
         transform-origin: left center;
         transition: transform .6s cubic-bezier(.19, 1, .22, 1);
