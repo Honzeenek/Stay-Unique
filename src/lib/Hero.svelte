@@ -15,9 +15,6 @@
         The <span class="motto-span">BIG</span> step towards meeting your goals on the internet.
     </h2>
     <HeroButton/>
-    <article class="bottom-line">
-        <p>Get started with a custom website tailored for your needs.</p>
-    </article>
 </section>
 
 <style>
@@ -101,17 +98,6 @@
                 font-weight: normal;
                 position: relative;
                 z-index: 5;
-            }
-        }
-
-        & .bottom-line {
-            display: flex;
-            justify-content: center;
-            margin-top: 24rem;
-            z-index: 1;
-
-            p {
-                font-size: 1.2rem;
             }
         }
     }
