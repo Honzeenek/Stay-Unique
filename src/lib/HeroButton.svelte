@@ -3,12 +3,12 @@
     import circleLogo from "../assets/logo circle.svg";
 </script>
 
-<main>
+<section>
     <button class='hero-button'>
         <img id='button-logo' src={circleLogo} alt="logo">
         Get Your Website
     </button>
-</main>
+</section>
 
 <style>
     :root {
@@ -71,16 +71,19 @@
         gap: 0.7rem;
         font-size: 1.5rem;
         font-weight: bold;
-        background-color: #23ce6b;
-        border: none;
+        background-color: rgba(0, 122, 255, 0.3);
+        border: 1px solid #007AFF;
         border-radius: 3rem;
         padding: 0.5rem 0.9rem;
         cursor: pointer;
 
         /* Vortex blur additions */
-        transition: transform 1.05s var(--elastic-ease);
+        transition: transform 1.05s var(--elastic-ease), background-color 0.5s ease-in;
         -webkit-tap-highlight-color: transparent;
         filter: drop-shadow(0 4px 17px rgb(52, 73, 102));
+    }
+    .hero-button:hover {
+        background-color: #007bffd2;
     }
 
     .hero-button:active {

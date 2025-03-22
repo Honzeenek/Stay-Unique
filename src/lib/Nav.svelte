@@ -4,86 +4,53 @@
     import {page} from '$app/stores'
     import {onMount} from 'svelte';
 
-    let scrollY = 0;
-    let isSticky = false;
-    let navElement: HTMLElement;
-
+    let scrolled = false;
 
     onMount(() => {
         const handleScroll = () => {
-            scrollY = window.scrollY;
-            isSticky = window.scrollY > 130;
+            scrolled = window.scrollY > 50;
         };
 
-        handleScroll();
-
         window.addEventListener('scroll', handleScroll);
-
         return () => window.removeEventListener('scroll', handleScroll);
-    })
+    });
 </script>
-
-<svelte:window bind:scrollY/>
-
-<div class="nav-wrapper" class:sticky={isSticky}>
-    <nav bind:this={navElement} class:docked={isSticky}>
-        <ul>
-            <li><a href="/" data-sveltekit-preload-data="hover"><img alt="logo" src={logo} class="logo"></a></li>
-            <li class="navItem"><a class="list-items-a" href="/#about">About</a></li>
-            <li class="navItem"><a class="list-items-a" href="/#work">Work</a></li>
-            <li class="navItem">
-                <a
-                        class={$page.url.pathname === '/contact' ? 'list-items-a active' : 'list-items-a'}
-                        id="contact" href="/contact"
-                        data-sveltekit-preload-data="hover"
-                >
-                    Contact
-                </a>
-            </li>
-        </ul>
-    </nav>
-</div>
-
+<nav class:scrolled={scrolled}>
+    <ul>
+        <li><a href="/" data-sveltekit-preload-data="hover"><img alt="logo" src={logo} class="logo"></a></li>
+        <li class="navItem"><a class="list-items-a" href="/#about">About</a></li>
+        <li class="navItem"><a class="list-items-a" href="/#work">Work</a></li>
+        <li class="navItem">
+            <a class={$page.url.pathname === '/contact' ? 'list-items-a active' : 'list-items-a'}
+               id="contact" href="/contact"
+               data-sveltekit-preload-data="hover"
+            > Contact
+            </a>
+        </li>
+    </ul>
+</nav>
 <style>
-    .nav-wrapper {
-        position: absolute;
-        width: 100%;
-        height: auto;
-        z-index: 1000;
-        display: flex;
-        justify-content: center;
-        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .sticky {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-    }
-
     nav {
-        margin-top: 0;
         color: #fff;
-        padding: 4rem 0;
+        width: fit-content;
+        padding: 1.5rem 0;
+        position: fixed;
+        top: 1rem;
+        left: 5.5rem;
         background: transparent;
-        width: 100%;
         transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-        border: 1px solid rgba(255, 255, 255, 0); /* Transparent border initially */
+        z-index: 1000;
     }
 
-    nav.docked {
+    nav.scrolled {
         position: fixed;
-        top: 0.6rem;
-        z-index: 1000;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-        padding: 0.75rem 3rem;
-        border-radius: 5rem;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        background-color: rgba(0, 0, 0, 0.79);
-        width: auto;
-        max-width: 600px;
-        backdrop-filter: blur(8px);
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0.7rem 2rem;
+        background: rgba(0, 0, 0, 0.849);
+        backdrop-filter: blur(10px);
+        border-radius: 100px;
     }
 
     ul {
@@ -94,7 +61,6 @@
         position: relative;
         z-index: 2;
     }
-
 
     ul p {
         margin-left: auto;
@@ -131,7 +97,7 @@
         left: -4px;
         right: -4px;
         position: absolute;
-        border-top: 2px solid #23ce6b;
+        border-top: 2px solid #FF8C42;
         transform: scaleX(0);
         transform-origin: left center;
         transition: transform .6s cubic-bezier(.19, 1, .22, 1);

@@ -10,6 +10,8 @@
 <main>
     <!--    <div class="glow-effect"></div>-->
     <div class="corner-glow-effect"></div>
+    <div class="second-glow"></div>
+    <div class="third-glow"></div>
     <Nav/>
     <Hero/>
     <About/>
@@ -43,15 +45,30 @@
 
     .corner-glow-effect {
         position: absolute;
-        top: -630px;
-        left: 1400px;
+        top: -530px;
+        left: 1600px;
         width: 46.05288rem;
         height: 65.88181rem;
         transform: rotate(36.203deg);
         flex-shrink: 0;
         border-radius: 67.88181rem;
         opacity: 0.61;
-        background: #52ffb8;
+        background: #FF8C42;
         filter: blur(151px);
+    }
+
+    .second-glow {
+        position: absolute;
+        top: -830px;
+        left: 1400px;
+        width: 46.05288rem;
+        height: 65.88181rem;
+        transform: rotate(36.203deg);
+        flex-shrink: 0;
+        border-radius: 67.88181rem;
+        opacity: 1;
+        background: #ffeebf;
+        filter: blur(151px);
+
     }
 </style>

@@ -4,24 +4,22 @@
     import AboutGrid from './AboutGrid.svelte'
 </script>
 
-<main>
-    <section>
-        <p id="background">ABOUT</p>
-        <section class="heading">
-            <h2 id="about">Hi, My Name is <span id="me">Jan</span></h2>
-        </section>
+<section class="about">
+    <p id="background">ABOUT</p>
+    <header class="heading">
+        <h2 id="about">Hi, My Name is <span id="me">Jan</span></h2>
+    </header>
 
-        <section class="content">
-            <article>
-                <h3 id="articleheading">My Qualities</h3>
-                <AboutGrid/>
-            </article>
-            <section class="picturesection">
-                <img src={picture} alt="picture of me on bike">
-            </section>
-        </section>
-    </section>
-</main>
+    <div class="content">
+        <article>
+            <h3 id="articleheading">My Qualities</h3>
+            <AboutGrid/>
+        </article>
+        <div class="picture-container">
+            <img src={picture} alt="Jan on a bike">
+        </div>
+    </div>
+</section>
 
 <style>
     :root {
@@ -30,12 +28,10 @@
         --font-small: 1rem;
     }
 
-    main {
-
+    .about {
         #background {
             user-select: none;
             position: relative;
-            top: 6rem;
             opacity: 0.2;
             z-index: -1;
             padding: 0;
@@ -75,13 +71,6 @@
         }
     }
 
-    .section-undertitle {
-        padding: 0;
-        color: #DADADA;
-        font-size: var(--font-small);
-        font-weight: bold;
-    }
-
     .content {
         display: flex;
         flex-direction: column;
@@ -96,11 +85,6 @@
         gap: 1.3rem;
         font-size: var(--font-small);
         line-height: 150%;
-
-
-        p {
-            color: #a8a8a8;
-        }
     }
 
     #articleheading {
@@ -109,7 +93,7 @@
         border-bottom: 1px solid #23ce6b;
     }
 
-    .picturesection {
+    .picture-container {
         height: 600px;
         display: flex;
         flex-direction: row;
@@ -132,7 +116,7 @@
             width: 40rem;
         }
 
-        .picturesection {
+        .picture-container {
             padding-top: 6rem;
             width: 40%;
             display: flex;

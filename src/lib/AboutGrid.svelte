@@ -5,14 +5,13 @@
     import Shield from '../assets/Shield.svg';
     import './reset.css'
 </script>
-
-<main>
-    <section class="aboutGrid">
-        <div class="grid-row">
-            <article>
-                <img src={Shield} alt="Shield Icon"/>
-                <h3>Modern & Fast <span class="greenspan">websites</span></h3>
-                <p>I create high-performance, user-friendly websites that help businesses stand out and convert visitors
+        
+<section class="aboutGrid">
+    <div class="grid-row">
+        <article>
+            <img src={Shield} alt="Shield Icon"/>
+            <h3>Modern & Fast <span class="greenspan">websites</span></h3>
+            <p>I create high-performance, user-friendly websites that help businesses stand out and convert visitors
                     into customers.</p>
             </article>
             <article class="left-column">
@@ -34,11 +33,10 @@
                     flawlessly.</p>
             </article>
         </div>
-    </section>
-</main>
+</section>
 
 <style>
-    main {
+    section {
         padding-top: 1rem;
     }
 
