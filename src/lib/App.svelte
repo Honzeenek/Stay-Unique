@@ -43,7 +43,7 @@
     /*    z-index: 1;*/
     /*}*/
 
-    .corner-glow-effect {
+    /* .corner-glow-effect {
         position: absolute;
         top: -530px;
         left: 1600px;
@@ -52,23 +52,22 @@
         transform: rotate(36.203deg);
         flex-shrink: 0;
         border-radius: 67.88181rem;
-        opacity: 0.61;
-        background: #FF8C42;
-        filter: blur(151px);
-    }
+        opacity: 0.2; */
+        /* background: #7ab5fd; */
+        /* filter: blur(151px);
+    } */
 
     .second-glow {
         position: absolute;
-        top: -830px;
-        left: 1400px;
-        width: 46.05288rem;
-        height: 65.88181rem;
-        transform: rotate(36.203deg);
-        flex-shrink: 0;
-        border-radius: 67.88181rem;
-        opacity: 1;
-        background: #ffeebf;
-        filter: blur(151px);
-
+        overflow: visible;
+        top: -100px;
+        right: -100px;
+        width: 30rem;
+        height: 30rem;
+        transform: rotate(-75deg);
+        /* background: #7ab5fd; */
+        /* background: linear-gradient(135deg,#3c93fd 0%, #ffffff 100%); */
+        background: radial-gradient(circle, rgba(255,255,255,1) 4%, rgba(119,213,255,0.5172443977591037) 29%, rgba(0,212,255,0) 100%);
+        pointer-events: none;
     }
 </style>

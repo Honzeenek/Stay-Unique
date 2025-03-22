@@ -2,7 +2,7 @@
     import './reset.css'
     import HeroButton from './HeroButton.svelte'
     import Particles from '$lib/Particles.svelte';
-    import ArrowDown from '../assets/ArrowDown.svg';
+    import HeroDown from './HeroDown.svelte';
 </script>
 
 <section class='hero'>
@@ -15,6 +15,7 @@
         The <span class="motto-span">BIG</span> step towards meeting your goals on the internet.
     </h2>
     <HeroButton/>
+    <HeroDown/>
 </section>
 
 <style>
