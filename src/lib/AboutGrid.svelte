@@ -59,7 +59,6 @@
         padding-right: 2.5rem;
         padding-bottom: 2.5rem;
         text-wrap: balance;
-        /*border-right: 1px solid #505050;*/
 
         img {
             height: auto;
