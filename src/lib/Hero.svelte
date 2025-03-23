@@ -3,6 +3,7 @@
     import HeroButton from './HeroButton.svelte'
     import Particles from '$lib/Particles.svelte';
     import HeroDown from './HeroDown.svelte';
+
 </script>
 
 <section class='hero'>
@@ -14,7 +15,7 @@
     <h2 class='motto-line'>
         The <span class="motto-span">BIG</span> step towards meeting your goals on the internet.
     </h2>
-    <HeroButton/>
+    <HeroButton link="/contact" />
     <HeroDown/>
     <div class="line"></div>
 </section>
@@ -55,10 +56,11 @@
         position: relative;
         overflow: hidden;
         & .hero-name {
+            font-family: "Geist Mono", monospace;
             user-select: none;
             font-size: 1.5rem;
             font-weight: normal;
-            color: #ffffff;
+            color: #B4CDED;
             position: relative;
             z-index: 5;
         }

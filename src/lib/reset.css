@@ -34,6 +34,8 @@
             1.0011 81.26%,
             1
     );
+    --font-geist-mono: 'Geist Mono', monospace;
+    --font-ibm-plex-mono: 'IBM Plex Mono', monospace;
 }
 
 ::-webkit-scrollbar {

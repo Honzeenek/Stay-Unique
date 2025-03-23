@@ -15,16 +15,21 @@
     <div class="second-glow"></div>
     <div class="third-glow"></div>
     <Nav/>
-    <Hero/>
-    <About/>
-    <Footer/>
+    <div class="content">
+        <Hero/>
+        <About/>
+        <Footer/>
+    </div>
 </main>
 
 <style>
     main {
-        padding: 0 8rem;
         position: relative;
         overflow-x: hidden;
+    }
+
+    .content {
+        padding: 0 8rem;
     }
 
     /* Animation keyframes for glow elements */

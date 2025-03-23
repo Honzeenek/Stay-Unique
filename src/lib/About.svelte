@@ -5,7 +5,6 @@
 </script>
 
 <section class="about">
-    <!-- <p id="background">ABOUT</p> -->
     <header class="heading">
         <h2 id="about">Hi, My Name is <span id="me">Jan</span></h2>
     </header>
@@ -27,26 +26,6 @@
         --font-large: 3.5rem;
         --font-medium: 1.3rem;
         --font-small: 1rem;
-    }
-
-    .about {
-        /* #background {
-            user-select: none;
-            position: relative;
-            opacity: 0.2;
-            z-index: -1;
-            padding: 0;
-            text-align: center;
-            -webkit-text-stroke-width: 1px;
-            -webkit-text-stroke-color: #000;
-            background: transparent;
-            font-size: 20rem;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 150%;
-            color: transparent;
-            -webkit-text-stroke: 1px white;
-        } */
     }
 
     .heading {
@@ -73,6 +52,7 @@
     }
 
     #about-brackets {
+        font-family: "Geist Mono", monospace;
         font-size: 1rem;
         color: #B4CDED;
         font-weight: normal;

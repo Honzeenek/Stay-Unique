@@ -1,13 +1,14 @@
 <script>
     import './reset.css'
     import circleLogo from "../assets/logo circle.svg";
+    let { link } = $props(); // Default to contact page
 </script>
 
 <section>
-    <button class='hero-button'>
-        <img id='button-logo' src={circleLogo} alt="logo">
-        Get Your Website
-    </button>
+        <a href={link} class="hero-button">
+            <img id='button-logo' src={circleLogo} alt="logo">
+            Get Your Website
+        </a>
 </section>
 
 <style>
