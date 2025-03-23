@@ -43,6 +43,7 @@
 
 <style>
     nav {
+        letter-spacing: 0.1em;
         font-family: "Geist Mono", monospace;
         color: #fff;
         width: 100%;

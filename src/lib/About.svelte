@@ -53,6 +53,7 @@
 
     #about-brackets {
         font-family: "Geist Mono", monospace;
+        letter-spacing: 0.1em;
         font-size: 1rem;
         color: #B4CDED;
         font-weight: normal;

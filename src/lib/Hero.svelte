@@ -57,6 +57,7 @@
         overflow: hidden;
         & .hero-name {
             font-family: "Geist Mono", monospace;
+            letter-spacing: 0.1em;
             user-select: none;
             font-size: 1.5rem;
             font-weight: normal;
@@ -120,21 +121,34 @@
     .particles-container {
         position: absolute;
         top: 0;
-        left: 0;
-        width: 100%;
+        right: 0;
+        width: 40%;
         height: 100%;
         overflow: hidden;
         z-index: 0;
+        clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
         mask-image: linear-gradient(
+            to left,
+            rgba(0, 0, 0, 1) 60%,
+            rgba(0, 0, 0, 0)
+        ),
+        linear-gradient(
             to bottom,
-            rgba(0, 0, 0, 1) 80%,
+            rgba(0, 0, 0, 1) 90%,
             rgba(0, 0, 0, 0)
         );
         -webkit-mask-image: linear-gradient(
+            to left,
+            rgba(0, 0, 0, 1) 60%,
+            rgba(0, 0, 0, 0)
+        ),
+        linear-gradient(
             to bottom,
-            rgba(0, 0, 0, 1) 80%,
+            rgba(0, 0, 0, 1) 90%,
             rgba(0, 0, 0, 0)
         );
+        mask-composite: intersect;
+        -webkit-mask-composite: source-in;
     }
 
     @keyframes fadeIn {

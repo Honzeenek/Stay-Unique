@@ -13,7 +13,7 @@
             id: 'tsparticles',
             options: {
                 fullScreen: {
-                    enable: false // This is important - disable fullScreen mode
+                    enable: false
                 },
                 background: {
                     color: {
@@ -22,10 +22,7 @@
                 },
                 particles: {
                     number: {
-                        value: 100,
-                        density: {
-                            enable: true,
-                        },
+                        value: 80,
                     },
                     color: {
                         value: '#ffffff',
@@ -34,23 +31,21 @@
                         type: 'circle',
                     },
                     opacity: {
-                        value: 0.3,
-                        random: false,
+                        value: 0.3
                     },
                     size: {
-                        value: 1,
-                        random: false,
+                        value: 1
                     },
                     move: {
                         enable: true,
-                        speed: 0.9,
-                        direction: 'none',
+                        speed: 0.8,
+                        direction: "none",
                         random: true,
                         straight: false,
                         outModes: {
-                            default: "out"
+                            default: "bounce"
                         },
-                    },
+                    }
                 },
                 interactivity: {
                     events: {

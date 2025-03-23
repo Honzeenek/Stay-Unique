@@ -77,9 +77,7 @@
         border-radius: 3rem;
         padding: 0.5rem 0.9rem;
         cursor: pointer;
-
-        /* Vortex blur additions */
-        transition: transform 1.05s var(--elastic-ease), background-color 0.5s ease-in;
+        transition: transform 1.5s var(--elastic-ease), background-color 0.4s ease-in;
         -webkit-tap-highlight-color: transparent;
         filter: drop-shadow(0 4px 17px rgb(52, 73, 102));
     }
@@ -102,9 +100,6 @@
         .hero-button:hover #button-logo,
         .hero-button:focus-visible #button-logo {
             transform: rotate(360deg) translateZ(0);
-        }
-
-        .hero-button:hover {
         }
     }
 </style>
