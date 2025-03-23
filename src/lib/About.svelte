@@ -5,13 +5,14 @@
 </script>
 
 <section class="about">
-    <p id="background">ABOUT</p>
+    <!-- <p id="background">ABOUT</p> -->
     <header class="heading">
         <h2 id="about">Hi, My Name is <span id="me">Jan</span></h2>
     </header>
 
     <div class="content">
         <article>
+            <h2 id="about-brackets">[ about ]</h2>
             <h3 id="articleheading">My Qualities</h3>
             <AboutGrid/>
         </article>
@@ -29,7 +30,7 @@
     }
 
     .about {
-        #background {
+        /* #background {
             user-select: none;
             position: relative;
             opacity: 0.2;
@@ -45,7 +46,7 @@
             line-height: 150%;
             color: transparent;
             -webkit-text-stroke: 1px white;
-        }
+        } */
     }
 
     .heading {
@@ -71,6 +72,14 @@
         }
     }
 
+    #about-brackets {
+        font-size: 1rem;
+        color: #B4CDED;
+        font-weight: normal;
+        line-height: 150%;
+        padding-bottom: 1.5rem;
+    }
+    
     .content {
         display: flex;
         flex-direction: column;
@@ -78,19 +87,17 @@
     }
 
     article {
-        padding: 6rem 0 0;
+        padding: 4rem 0 0;
         width: 40rem;
         display: flex;
         flex-direction: column;
-        gap: 1.3rem;
         font-size: var(--font-small);
         line-height: 150%;
     }
 
     #articleheading {
-        padding-bottom: 1rem;
-        font-size: 2rem;
-        border-bottom: 1px solid #23ce6b;
+        padding-bottom: 2rem;
+        font-size: 2.5rem;
     }
 
     .picture-container {

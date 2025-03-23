@@ -37,7 +37,7 @@
         position: fixed;
         top: 1rem;
         font-size: 1rem;
-        left: 5.5rem;
+        left: 8rem;
         background: transparent;
         transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         z-index: 1000;

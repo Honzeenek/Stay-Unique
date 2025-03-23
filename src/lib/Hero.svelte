@@ -9,13 +9,14 @@
     <div class="particles-container">
         <Particles/>
     </div>
-    <h2 class="hero-name">Stay Unique</h2>
+    <h2 class="hero-name">[ shine clearly ]</h2>
     <h1 class='hero-text'>WEB ENGINEER</h1>
     <h2 class='motto-line'>
         The <span class="motto-span">BIG</span> step towards meeting your goals on the internet.
     </h2>
     <HeroButton/>
     <HeroDown/>
+    <div class="line"></div>
 </section>
 
 <style>
@@ -49,15 +50,13 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        border-bottom: 1px solid #B4CDED;
         opacity: 0;
         animation: fadeIn 1s ease-in-out forwards;
         position: relative;
         overflow: hidden;
-
         & .hero-name {
             user-select: none;
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: normal;
             color: #ffffff;
             position: relative;
@@ -87,10 +86,11 @@
             user-select: none;
             position: relative;
             top: -2rem;
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: normal;
             text-align: center;
             margin-top: 1rem;
+            margin-bottom: 2rem;
             line-height: 1.45;
             z-index: 5;
 
@@ -101,6 +101,18 @@
                 z-index: 5;
             }
         }
+    }
+
+    .line {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 1px;
+        background-color: #B4CDED;
+        border: none;
+        z-index: 5;
     }
 
     .particles-container {

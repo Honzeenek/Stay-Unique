@@ -22,7 +22,7 @@
 
 <style>
     main {
-        padding: 0 5.5rem;
+        padding: 0 8rem;
         position: relative;
         overflow-x: hidden;
     }

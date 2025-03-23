@@ -6,7 +6,7 @@
 
 <article class="bottom-line">
     <img src={ArrowDown} alt="Arrow Down" class="arrow-down" />
-    <p>Get started with a custom website tailored for your needs.</p>
+    <p>Get started with a custom website <br> for your needs.</p>
     <button class="hero-down-button">
         BREAK THE ICE
     </button>
@@ -15,13 +15,16 @@
 <style>
     .bottom-line {
         display: flex;
-        justify-content: space-evenly;
-        margin-top: 24rem;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+        gap: 2rem;
+        margin-top: 22rem;
         z-index: 1;
-        font-size: 1rem;
-
+        gap: 20rem;
+        font-size: 1.5rem;
         p {
-            font-size: 2rem;
+            font-size: 1rem;
         }
 
         img.arrow-down {

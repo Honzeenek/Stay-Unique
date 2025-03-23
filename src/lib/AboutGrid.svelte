@@ -36,9 +36,6 @@
 </section>
 
 <style>
-    section {
-        padding-top: 1rem;
-    }
 
     .aboutGrid {
         display: flex;
