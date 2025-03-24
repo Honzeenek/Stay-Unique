@@ -46,7 +46,7 @@
     }
 
     .hero {
-        height: 70vh;
+        height: 100vh;
         padding: 13rem 0 6rem 0;
         display: flex;
         flex-direction: column;
