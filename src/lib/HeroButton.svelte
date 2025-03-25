@@ -76,13 +76,11 @@
         background-color: rgba(0, 122, 255, 0.3);
         border: 1px solid #007AFF;
         border-radius: 3rem;
-        padding: 0.5rem 1.2rem;
+        padding: 0.5rem 0.9rem;
         cursor: pointer;
         transition: transform 1.5s var(--elastic-ease), background-color 0.4s ease-in;
         -webkit-tap-highlight-color: transparent;
         filter: drop-shadow(0 4px 17px rgb(52, 73, 102));
-        text-align: center;
-        line-height: 1;
     }
     .hero-button:hover {
         background-color: #007bffd2;
@@ -97,8 +95,6 @@
         height: 2rem;
         /* Vortex blur icon transition */
         transition: transform 1.2s var(--transform-ease);
-        display: block; /* Ensures the image behaves consistently */
-        vertical-align: middle; /* Helps with alignment */
     }
 
     @media (hover: hover) and (pointer: fine) {
