@@ -1,5 +1,6 @@
 <script>
     import './reset.css'
+    import './fonts.css'
     import HeroButton from './HeroButton.svelte'
     import Particles from '$lib/Particles.svelte';
     import HeroDown from './HeroDown.svelte';

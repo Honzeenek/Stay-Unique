@@ -4,14 +4,12 @@
     font-weight: bold;
     font-style: normal;
 }
-
 @font-face {
     font-family: 'helvetica-now';
     src: url('../fonts/HelveticaNowText-Regular.ttf');
     font-weight: normal;
     font-style: normal;
 }
-
 :root {
     --elastic-ease-out: linear(
             0,
@@ -34,6 +32,7 @@
             1.0011 81.26%,
             1
     );
+    --font-geist-sans: 'Geist Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-geist-mono: 'Geist Mono', monospace;
     --font-ibm-plex-mono: 'IBM Plex Mono', monospace;
 }
@@ -90,7 +89,7 @@ time, mark, audio, video {
     border: 0;
     font-size: 100%;
     color: white;
-    font-family: helvetica-now, sans-serif;
+    font-family: var(--font-geist-sans), helvetica-now, sans-serif;
     vertical-align: baseline;
     text-decoration: none;
 }
