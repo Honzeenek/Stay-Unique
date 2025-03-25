@@ -10,7 +10,7 @@
             </h2>
             <h3 id="main-subheading">Here is why you need one:</h3>
         </article>
-        <article class="need-me-block">
+        <section class="need-me-block">
             <section class="heading-story">
                 <article>
                     <h2>In 2025</h2>
@@ -141,7 +141,10 @@
                     </li>
                 </ul>
             </article>
-        </article>
+            <section class="cta">
+                <button> READY TO SHINE?</button>
+            </section>
+        </section>
     </section>
 </section>
 
@@ -200,7 +203,6 @@
         }
 
         .need-me-block {
-            height: 83vh;
             padding: 2.5rem;
             display: flex;
             flex-direction: column;
@@ -310,6 +312,29 @@
                 li {
                     color: #dadada;
                     line-height: 1.5;
+                }
+            }
+        }
+        /* Add this inside your existing .why-need style block */
+        .cta {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            button {
+                color: white;
+                font-size: 1rem;
+                background-color: rgba(0, 123, 255, 0.096);
+                border: 1px solid #007bff6c;
+                border-radius: 3rem;
+                width: fit-content;
+                font-weight: bold;
+                padding: 1rem 2rem;
+                cursor: pointer;
+                filter: drop-shadow(0 4px 17px rgb(52, 73, 102));
+
+                &:hover {
+                    background-color: rgba(0, 122, 255, 0.3);
                 }
             }
         }
