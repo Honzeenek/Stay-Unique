@@ -1,5 +1,6 @@
 <script>
     import "./reset.css";
+    let { link } = $props();
 </script>
 
 <section class="why-need">
@@ -142,7 +143,7 @@
                 </ul>
             </article>
             <section class="cta">
-                <button> READY TO SHINE?</button>
+                <a href={link}> READY TO SHINE?</a>
             </section>
         </section>
     </section>
@@ -172,6 +173,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            gap: 1rem;
             width: fix-content;
 
             #main-heading {
@@ -321,15 +323,15 @@
             display: flex;
             justify-content: center;
 
-            button {
+            a {
                 color: white;
                 font-size: 1rem;
                 background-color: rgba(0, 123, 255, 0.096);
                 border: 1px solid #007bff6c;
-                border-radius: 3rem;
+                border-radius: 1.6rem;
                 width: fit-content;
                 font-weight: bold;
-                padding: 1rem 2rem;
+                padding: 1rem 14rem;
                 cursor: pointer;
                 filter: drop-shadow(0 4px 17px rgb(52, 73, 102));
 
