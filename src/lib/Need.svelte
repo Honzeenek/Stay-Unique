@@ -87,7 +87,8 @@
                 <ul>
                     <li>
                         You are a master in your craft, but you are limited to a
-                        physical space<br /> where customers must come to you.
+                        space where <br /> customers must come to you physically
+                        or try hard to actually finding <br /> you online.
                     </li>
                     <li>You lack the resources to build a presence online.</li>
                     <li>
@@ -212,9 +213,9 @@
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             position: relative;
-            
+
             &::before {
-                content: '';
+                content: "";
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -225,7 +226,6 @@
                 z-index: -1;
                 border-radius: inherit;
             }
-
         }
 
         .heading-story {
