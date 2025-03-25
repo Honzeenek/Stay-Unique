@@ -88,7 +88,7 @@
                     <li>
                         You are a master in your craft, but you are limited to a
                         space where <br /> customers must come to you physically
-                        or try hard to actually finding <br /> you online.
+                        or try hard to actually find <br /> you online.
                     </li>
                     <li>You lack the resources to build a presence online.</li>
                     <li>
