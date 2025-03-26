@@ -28,7 +28,6 @@
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-                font-family: "Helvetica Now Text";
                 font-size: 3rem;
                 font-style: normal;
                 font-weight: 700;

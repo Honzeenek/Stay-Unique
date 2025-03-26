@@ -1,21 +1,21 @@
 <script lang="ts">
-    import Nav from './Nav.svelte';
-    import Footer from './Footer.svelte';
-    import './reset.css';
+    import Nav from "./Nav.svelte";
+    import Footer from "./Footer.svelte";
+    import "./reset.css";
 
     const handleSubmit = async (event: Event) => {
         event.preventDefault();
         const form = event.target as HTMLFormElement;
         const formData = new FormData(form);
         const data: ContactFormData = {
-            name: formData.get('name') as string,
-            email: formData.get('email') as string,
-            organization: formData.get('organization') as string | undefined,
-            service: formData.get('service') as string,
-            message: formData.get('message') as string
+            name: formData.get("name") as string,
+            email: formData.get("email") as string,
+            organization: formData.get("organization") as string | undefined,
+            service: formData.get("service") as string,
+            message: formData.get("message") as string,
         };
         await sendData(data);
-    }
+    };
 
     interface ContactFormData {
         name: string;
@@ -26,52 +26,82 @@
     }
 
     const sendData = async (formData: ContactFormData) => {
-        const resp = await fetch('/mailgun', {
-            method: 'POST',
+        const resp = await fetch("/mailgun", {
+            method: "POST",
             body: JSON.stringify(formData),
             headers: {
-                'Content-Type': 'application/json'
-            }
+                "Content-Type": "application/json",
+            },
         });
         const name = await resp.json();
         response = name;
-    }
+    };
 
-    let response = '';
+    let response = "";
 </script>
 
 <div class="page-container">
     <div class="glow-effect"></div>
-    <Nav/>
+    <Nav />
     <section class="contact-content">
-        <h1>Ready to enhance <br> your <span>WEB</span> game?</h1>
+        <h1>Ready to enhance <br /> your <span>WEB</span> game?</h1>
         <h2>Let's break the ice</h2>
         <form on:submit={handleSubmit}>
             <div id="greenLine"></div>
             <div class="form-group">
                 <label for="name">What's your name?</label>
-                <input id="name" name="name" placeholder="John Doe" type="text" required/>
+                <input
+                    id="name"
+                    name="name"
+                    placeholder="John Doe"
+                    type="text"
+                    required
+                />
             </div>
             <div class="form-group">
                 <label for="email">What's your email?</label>
-                <input id="email" name="email" placeholder="john.doe@email.com" type="email" required/>
+                <input
+                    id="email"
+                    name="email"
+                    placeholder="john.doe@email.com"
+                    type="email"
+                    required
+                />
             </div>
             <div class="form-group">
-                <label for="organization">What's the name of your organization?</label>
-                <input id="organization" name="organization" placeholder="Pfizer" type="text"/>
+                <label for="organization"
+                    >What's the name of your organization?</label
+                >
+                <input
+                    id="organization"
+                    name="organization"
+                    placeholder="Pfizer"
+                    type="text"
+                />
             </div>
             <div class="form-group">
                 <label for="service">What service are you looking for?</label>
-                <input id="service" name="service" placeholder="Web Development / Web Design" type="text" required/>
+                <input
+                    id="service"
+                    name="service"
+                    placeholder="Web Development / Web Design"
+                    type="text"
+                    required
+                />
             </div>
             <div class="form-group">
                 <label for="message">Your message</label>
-                <textarea id="message" name="message" placeholder="Hello Jan, I need help with..." required></textarea>
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Hello Jan, I need help with..."
+                    required
+                ></textarea>
             </div>
             <button type="submit">SUBMIT</button>
         </form>
     </section>
-    <Footer/>
+    <Footer />
     {#if response}
         <p aria-live="polite">{response}</p>
     {/if}
@@ -92,15 +122,14 @@
         width: 60vw;
         height: 70px;
         background: radial-gradient(
-                ellipse at center top,
-                rgba(255, 255, 255, 0.7) 0%,
-                rgba(255, 255, 255, 0.4) 20%,
-                rgba(255, 255, 255, 0) 60%
+            ellipse at center top,
+            rgba(255, 255, 255, 0.7) 0%,
+            rgba(255, 255, 255, 0.4) 20%,
+            rgba(255, 255, 255, 0) 60%
         );
         pointer-events: none;
         z-index: 1;
     }
-
 
     .contact-content {
         display: flex;
@@ -117,7 +146,15 @@
             padding: 0 0 1rem 0;
 
             span {
-                color: rgb(159, 252, 255);
+                background: linear-gradient(
+                    20deg,
+                    #fff 15.73%,
+                    #b4cded 45.91%,
+                    #344966 90.95%
+                );
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
         }
 
@@ -142,10 +179,11 @@
                 gap: 1rem;
                 flex-direction: column;
                 border: none;
-                border-bottom: 1px solid #2A2A2A;
+                border-bottom: 1px solid #2a2a2a;
                 transition: border-color 0.5s ease;
 
-                input, textarea {
+                input,
+                textarea {
                     font-family: inherit;
                     font-size: 1.2rem;
                     background: transparent;
@@ -161,7 +199,7 @@
                 }
 
                 &:has(input:focus) {
-                    border-bottom-color: #23ce6b;
+                    border-bottom-color: #007aff;
                 }
             }
 
@@ -170,20 +208,24 @@
             }
 
             button {
-                font-family: inherit;
-                font-size: 1.5rem;
-                background: #23ce6b;
+                color: white;
+                font-size: 1rem;
+                background-color: rgba(0, 123, 255, 0.096);
+                border: 1px solid #007bff6c;
                 border-radius: 1rem;
-                padding: 1rem 0;
-                border: none;
+                width: fit-content;
                 font-weight: bold;
+                padding: 1rem 17rem;
                 cursor: pointer;
-                transition: transform 1.05s var(--elastic-ease);
-                -webkit-tap-highlight-color: transparent;
+                filter: drop-shadow(0 4px 17px rgb(52, 73, 102));
+
+                &:hover {
+                    background-color: rgba(0, 122, 255, 0.3);
+                }
             }
 
             button:active {
-                transform: scaleX(0.955) scaleY(0.954)
+                transform: scaleX(0.955) scaleY(0.954);
             }
         }
     }
