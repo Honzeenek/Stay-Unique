@@ -1,6 +1,6 @@
 <article class="heading">
     <h2 id="main-heading">
-        The next <span>shine</span> is waiting for You.
+        The next <span>shine</span> is waiting for you.
     </h2>
     <h3 id="main-subheading">Here is why you need one:</h3>
 </article>
@@ -16,6 +16,7 @@
         #main-heading {
             font-size: 2.5rem;
             line-height: 1.5;
+            letter-spacing: -2%;
 
             span {
                 background: linear-gradient(

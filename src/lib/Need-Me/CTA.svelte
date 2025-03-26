@@ -11,6 +11,7 @@
         width: 100%;
         display: flex;
         justify-content: center;
+        padding-top: 2.5rem;
 
         a {
             color: white;
