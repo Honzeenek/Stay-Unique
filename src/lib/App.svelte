@@ -5,7 +5,7 @@
     import Footer from "./Footer.svelte";
     import About from './About.svelte'
     import AboutGrid from './AboutGrid.svelte'
-    import Need from './Need.svelte'
+    import Need from './Need-Me/Need.svelte'
 </script>
 
 <main>
@@ -16,7 +16,7 @@
     <Nav/>
     <div class="content">
         <Hero/>
-        <Need link="/contact" />
+        <Need />
         <About/>
         <Footer/>
     </div>
