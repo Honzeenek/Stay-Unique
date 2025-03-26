@@ -3,7 +3,7 @@
     import Heading from "./Heading.svelte";
     import Story from "./Story.svelte";
     import Problem from "./Problem.svelte";
-    import Solution from './Solution-section.svelte';
+    import Solution from './Solution.svelte';
     import CTA from './CTA.svelte';
 </script>
 

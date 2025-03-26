@@ -1,6 +1,7 @@
 <script lang="ts">
     import Nav from './Nav.svelte';
     import Footer from './Footer.svelte';
+    import './reset.css';
 
     const handleSubmit = async (event: Event) => {
         event.preventDefault();
@@ -42,7 +43,7 @@
 <div class="page-container">
     <div class="glow-effect"></div>
     <Nav/>
-    <main class="contact-content">
+    <section class="contact-content">
         <h1>Ready to enhance <br> your <span>WEB</span> game?</h1>
         <h2>Let's break the ice</h2>
         <form on:submit={handleSubmit}>
@@ -69,7 +70,7 @@
             </div>
             <button type="submit">SUBMIT</button>
         </form>
-    </main>
+    </section>
     <Footer/>
     {#if response}
         <p aria-live="polite">{response}</p>
@@ -77,11 +78,11 @@
 </div>
 
 <style>
-    main {
-        padding: 0 5.5rem;
-        position: relative;
+    .page-container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
     }
-
     .glow-effect {
         position: absolute;
         opacity: 50%;
@@ -104,7 +105,7 @@
     .contact-content {
         display: flex;
         flex-direction: column;
-        padding: 13rem 0;
+        padding: 13rem 8rem;
         color: #ffffff;
         max-width: 600px;
         width: 100%;
@@ -116,7 +117,7 @@
             padding: 0 0 1rem 0;
 
             span {
-                color: #23CE6B;
+                color: rgb(159, 252, 255);
             }
         }
 
