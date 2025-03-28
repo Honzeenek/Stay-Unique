@@ -9,7 +9,7 @@
             A space where your customers can browse your products/service<br /> anytime,
             anywhere.
         </li>
-        <li>A website that turns leads into interested customers</li>
+        <li>A website that turns leads into INTERESTED customers</li>
     </ul>
 </article>
 
