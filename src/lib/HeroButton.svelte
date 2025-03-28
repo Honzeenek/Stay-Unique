@@ -93,7 +93,6 @@
     #button-logo {
         width: 2rem;
         height: 2rem;
-        /* Vortex blur icon transition */
         transition: transform 1.2s var(--transform-ease);
     }
 
