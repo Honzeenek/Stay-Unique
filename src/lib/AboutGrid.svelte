@@ -29,7 +29,7 @@
             <article class="bot-row left-column">
                 <img src={Checkmark} alt="Checkmark Icon"/>
                 <h3>I choose <span class="greenspan">quality</span> over shortcuts.</h3>
-                <p>I focus on clean design, fast performance, and smooth user experience, making sure your website works
+                <p>I focus on clean design, good performance, and smooth user experience, making sure your website works
                     flawlessly.</p>
             </article>
         </div>
