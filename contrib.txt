@@ -1,0 +1,7 @@
+Contributions >> contrib.txt 
+git add fakefile.txt
+
+GIT_AUTHOR_DATE=2025-04-01 18:34:07 GIT_COMMITTER_DATE=2025-04-01 18:34:07 git commit -m repocommit
+
+
+echo Contributions
