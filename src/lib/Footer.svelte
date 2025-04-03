@@ -8,7 +8,6 @@
     export let contactPath = "/contact";
     export let email = "jan.palenik@icloud.com";
 
-    // Use a reactive variable instead of DOM manipulation
     let isIconHovered = false;
 </script>
 
