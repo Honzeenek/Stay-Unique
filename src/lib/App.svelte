@@ -6,6 +6,7 @@
     import About from './About.svelte'
     import AboutGrid from './AboutGrid.svelte'
     import Need from './Need-Me/Need.svelte'
+    import Todo from './Todo.svelte'
 </script>
 
 <main>
@@ -16,6 +17,7 @@
     <Nav/>
     <div class="content">
         <Hero/>
+        <Todo />
         <Need />
         <About/>
         <Footer/>
@@ -56,24 +58,6 @@
             transform: scale(1) rotate(36.203deg);
         }
     }
-
-    /*.glow-effect {*/
-    /*    position: absolute;*/
-    /*    opacity: 50%;*/
-    /*    top: 0;*/
-    /*    left: 50%;*/
-    /*    transform: translateX(-50%);*/
-    /*    width: 60vw;*/
-    /*    height: 70px;*/
-    /*    background: radial-gradient(*/
-    /*            ellipse at center top,*/
-    /*            rgba(255, 255, 255, 0.7) 0%,*/
-    /*            rgba(255, 255, 255, 0.4) 20%,*/
-    /*            rgba(255, 255, 255, 0) 60%*/
-    /*    );*/
-    /*    pointer-events: none;*/
-    /*    z-index: 1;*/
-    /*}*/
 
     .corner-glow-effect {
         position: absolute;
