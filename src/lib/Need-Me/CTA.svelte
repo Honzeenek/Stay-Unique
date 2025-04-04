@@ -3,7 +3,7 @@
 </script>
 
 <section class="cta">
-    <a href={link}> READY TO SHINE?</a>
+    <a href={link}>READY TO SHINE?</a>
 </section>
 
 <style>
